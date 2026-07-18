@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://go.freshlocksealer.com/sitemap.xml
