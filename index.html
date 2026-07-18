@@ -12,6 +12,16 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B5FFF'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='900' font-size='18'%3ES%3C/text%3E%3C/svg%3E" />
 <meta property="og:image" content="https://go.freshlocksealer.com/images/hero.jpg" />
 <meta property="og:url" content="https://go.freshlocksealer.com/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ru_RU" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SealQ — Handheld Vacuum Sealer Wholesale from China Factory" />
+<meta name="twitter:description" content="Factory-direct handheld vacuum sealers & embossed vacuum bags. CE/RoHS. MOQ from 500 pcs. OEM/ODM welcome." />
+<meta name="twitter:image" content="https://go.freshlocksealer.com/images/hero.jpg" />
+<link rel="alternate" hreflang="en" href="https://go.freshlocksealer.com/" />
+<link rel="alternate" hreflang="ru" href="https://go.freshlocksealer.com/?lang=ru" />
+<link rel="alternate" hreflang="x-default" href="https://go.freshlocksealer.com/" />
+<meta name="robots" content="index,follow" />
 <meta name="theme-color" content="#0B5FFF" />
 <link rel="canonical" href="https://go.freshlocksealer.com/" />
 <style>
@@ -294,6 +304,25 @@
   body.ru .hero{background:linear-gradient(135deg,#FFF5EC 0%,#F5FFF9 100%)}
 
   /* Responsive */
+  
+  /* Mobile improvements */
+  @media(max-width:480px){
+    h1{font-size:28px;line-height:1.2}
+    .hero p.lead{font-size:16px}
+    .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .hero-tag{position:static;margin-top:12px;border-radius:10px;padding:12px 14px}
+    .factory-highlight .sample-emoji{font-size:48px!important}
+  }
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+  @media(max-width:600px){.gallery{grid-template-columns:repeat(2,1fr)!important}}
+  button{-webkit-appearance:none;appearance:none}
+  /* Mobile nav */
+  .hamburger{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--dark)}
+  @media(max-width:900px){
+    .hamburger{display:block}
+    nav ul.mobile-open{display:flex!important;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;padding:20px;gap:16px;box-shadow:var(--shadow-lg);border-radius:0 0 14px 14px}
+  }
+
   @media(max-width:900px){
     h1{font-size:36px}
     h2{font-size:28px}
@@ -309,6 +338,22 @@
     .contact-mini{display:none}
   }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "name":"QILI Electronics / SealQ",
+      "url":"https://go.freshlocksealer.com",
+      "email":"jasonyuan866@gmail.com",
+      "address":{"@type":"PostalAddress","addressRegion":"Zhejiang","addressCountry":"China"},
+      "makesOffers":{"@type":"Offer","itemOffered":{"@type":"Product","name":"PVS02 Handheld Vacuum Sealer","sku":"PVS02","brand":{"@type":"Brand","name":"SealQ"}},"availability":"https://schema.org/InStock"}
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -316,7 +361,7 @@
 <div class="lang-bar">
   <div class="container">
     <div class="contact-mini">
-      <a>📧 jasonyuan866@gmail.com</a>
+      <a href="mailto:jasonyuan866@gmail.com">📧 jasonyuan866@gmail.com</a>
       <a>🌍 CE / RoHS Certified · Factory Direct</a>
     </div>
     <div class="lang-switch">
@@ -343,9 +388,10 @@
         <li><a href="#contact" lang-en>Contact</a><a href="#contact" lang-ru>Контакты</a></li>
       </ul>
     </nav>
+    <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('mobile-open')" aria-label="Menu">☰</button>
     <a href="#contact" class="btn btn-primary">
-      <span lang-en>Get a Quote</span>
-      <span lang-ru>Получить прайс</span>
+      <span lang-en>Get Price List</span>
+      <span lang-ru>Получить КП</span>
     </a>
   </div>
 </header>
@@ -368,8 +414,8 @@
       </p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">
-          <span lang-en>Request Quote →</span>
-          <span lang-ru>Запросить прайс →</span>
+          <span lang-en>Get Price List & Datasheet →</span>
+          <span lang-ru>Получить прайс-лист →</span>
         </a>
         <a href="#products" class="btn btn-outline">
           <span lang-en>View Products</span>
@@ -405,8 +451,8 @@
         <div>
           <strong lang-en>PVS02 — Portable Vacuum Sealer</strong>
           <strong lang-ru>PVS02 — Портативный вакууматор</strong><br/>
-          <span lang-en>60 kPa suction · USB-C rechargeable · 1200mAh</span>
-          <span lang-ru>60 кПа · USB-C · аккумулятор 1200 мАч</span>
+          <span lang-en>-60 kPa suction · USB-C rechargeable · 1200mAh</span>
+          <span lang-ru>-60 кПа · USB-C · аккумулятор 1200 мАч</span>
         </div>
       </div>
     </div>
@@ -439,11 +485,11 @@
           <li><strong lang-en>Suction Power</strong><strong lang-ru>Мощность всасывания</strong><span>-60 kPa</span></li>
           <li><strong lang-en>Battery</strong><strong lang-ru>Аккумулятор</strong><span>1200 mAh Li-ion, USB-C</span></li>
           <li><strong lang-en>Charging Time</strong><strong lang-ru>Время зарядки</strong><span>2.5–3 hrs</span></li>
-          <li><strong><span lang-en>Working Time</span><span lang-ru>Время работы</span></strong><span lang-en>~40 min per charge</span><span lang-ru>~40 мин на заряде</span></li>
+          <li><strong><span lang-en>Working Time</span><span lang-ru>Время работы</span></strong><span>~40 min per charge / ~40 мин на заряде</span></li>
           <li><strong lang-en>Material</strong><strong lang-ru>Материал</strong><span>ABS + PC, pearl white</span></li>
           <li><strong lang-en>Dimensions / Weight</strong><strong lang-ru>Размеры / Вес</strong><span>Φ55 × 160 mm / ~210 g</span></li>
           <li><strong lang-en>Certifications</strong><strong lang-ru>Сертификаты</strong><span>CE, RoHS, FCC</span></li>
-          <li><strong lang-en>Colors</strong><strong lang-ru>Цвета</strong><span>Pearl white (OEM colors available)</span><span lang-ru>Жемчужно-белый (OEM цвета доступны)</span></li>
+          <li><strong lang-en>Colors</strong><strong lang-ru>Цвета</strong><span>Pearl white / OEM colors available</span></li>
         </ul>
       </div>
 
@@ -451,7 +497,7 @@
       <div class="product-card">
         <span class="tag" lang-en>BEST SELLING ACCESSORY</span>
         <span class="tag" lang-ru>ХИТ ПРОДАЖ</span>
-        <img src="images/p2.jpg" alt="Embossed Vacuum Sealer Bags" class="product-img" />
+        <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Embossed Vacuum Sealer Bags" class="product-img" />
         <h3 lang-en>Embossed Vacuum Sealer Bags &amp; Rolls</h3>
         <h3 lang-ru>Гофрированные вакуумные пакеты и рулоны</h3>
         <p class="desc" lang-en>Co-extruded PA/PE embossed vacuum bags with one-side mesh channel for maximum air extraction. BPA-free, food-grade, freezer-, boil-, and sous-vide safe.</p>
@@ -461,8 +507,8 @@
           <li><strong lang-en>Thickness</strong><strong lang-ru>Толщина</strong><span>90–110 microns (customizable)</span></li>
           <li><strong lang-en>Temperature Range</strong><strong lang-ru>Диапазон температур</strong><span>-20°C ~ 100°C</span></li>
           <li><strong lang-en>Standard Sizes</strong><strong lang-ru>Стандартные размеры</strong><span>15×20, 20×30, 25×35 cm + rolls</span></li>
-          <li><strong lang-en>Custom Sizes</strong><strong lang-ru>Индивидуальные размеры</strong><span>Available on request</span><span lang-ru>По запросу</span></li>
-          <li><strong lang-en>Printing</strong><strong lang-ru>Печать</strong><span>Custom logo / private label</span><span lang-ru>Ваш логотип / Private label</span></li>
+          <li><strong lang-en>Custom Sizes</strong><strong lang-ru>Индивидуальные размеры</strong><span>Available on request / По запросу</span></li>
+          <li><strong lang-en>Printing</strong><strong lang-ru>Печать</strong><span>Custom logo / Private label</span></li>
           <li><strong lang-en>Food Contact</strong><strong lang-ru>Пищевой контакт</strong><span>FDA / EU food-grade compliant</span></li>
         </ul>
       </div>
@@ -470,10 +516,10 @@
 
     <!-- Gallery thumbnails -->
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px">
-      <img src="images/p1.jpg" alt="Vacuum sealer in use" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
-      <img src="images/p3.jpg" alt="Product set" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
-      <img src="images/p4.jpg" alt="Kitchen scene" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
-      <img src="images/p2.jpg" alt="Vacuum bags range" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
+      <img src="images/p1.jpg" loading="lazy" decoding="async" alt="Vacuum sealer in use" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
+      <img src="images/p3.jpg" loading="lazy" decoding="async" alt="Product set" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
+      <img src="images/p4.jpg" loading="lazy" decoding="async" alt="Kitchen scene" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
+      <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Vacuum bags range" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
     </div>
   </div>
 </section>
@@ -689,9 +735,10 @@
           <div class="c-icon">📱</div>
           <div>
             <strong>WhatsApp / WeChat</strong>
-            <a>On request via email</a>
-            <span lang-en>Share your number in the form and we'll add you</span>
-            <span lang-ru>Укажите номер в форме — мы добавим вас</span>
+            <a href="#contact" lang-en>Send inquiry → we'll add you on WhatsApp within 24h</a>
+            <a href="#contact" lang-ru>Отправьте запрос — добавим в WhatsApp в течение 24ч</a>
+            <span lang-en>Prefer direct? Leave your number in the form</span>
+            <span lang-ru>Укажите номер в форме для быстрой связи</span>
           </div>
         </li>
         <li>
@@ -699,7 +746,7 @@
           <div>
             <strong lang-en>Company</strong>
             <strong lang-ru>Компания</strong>
-            <span>QILI Electronics (七力电子) · Zhejiang, China</span>
+            <span>QILI Electronics · Zhejiang, China</span>
             <span lang-en>Vacuum packaging manufacturer since 2015</span>
             <span lang-ru>Производитель вакуумной упаковки с 2015</span>
           </div>
@@ -782,7 +829,7 @@
       <div class="form-group">
         <label lang-en>Message</label>
         <label lang-ru>Сообщение</label>
-        <textarea name="message" placeholder="Tell us about your market, target price, customization needs, or any questions..."></textarea>
+        <textarea name="message" id="msgField" data-enph="Tell us about your market, target quantity, customization needs, or any questions..." data-ruph="Расскажите о вашем рынке, желаемом объёме, требованиях к кастомизации или задайте вопросы..."></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary">
@@ -837,7 +884,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 QILI Electronics (七力电子). All rights reserved. · SealQ™ is a trademark of QILI Electronics.</div>
+      <div>© 2026 QILI Electronics. All rights reserved. · SealQ™ is a trademark of QILI Electronics.</div>
       <div lang-en>CE · RoHS · FCC · Factory Direct from China</div>
       <div lang-ru>CE · RoHS · FCC · Напрямую из Китая</div>
     </div>
@@ -850,10 +897,36 @@ function setLang(lang){
   document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));
   document.querySelector(`.lang-switch button:nth-child(${lang==='en'?1:2})`).classList.add('active');
   document.documentElement.lang = lang;
+  // switch textarea placeholder
+  const tf=document.getElementById('msgField');
+  if(tf){tf.placeholder = lang==='ru' ? tf.dataset.ruph : tf.dataset.enph;}
+  // switch product select options (option cannot be CSS-hidden)
+  const ps=document.querySelector('select[name="product"]');
+  if(ps){
+    const opts = lang==='ru'
+      ? [['','Выберите...'],['sealer','Вакууматор PVS02'],['bags','Вакуумные пакеты / рулоны'],['both','Вакууматор + пакеты'],['oem','OEM / ODM проект']]
+      : [['','Select...'],['sealer','PVS02 Vacuum Sealer'],['bags','Vacuum Bags / Rolls'],['both','Both Sealer + Bags'],['oem','OEM / ODM Project']];
+    const cur=ps.value; ps.innerHTML='';
+    opts.forEach(([v,t])=>{const o=document.createElement('option');o.value=v;o.textContent=t;if(v===cur)o.selected=true;ps.appendChild(o)});
+  }
+  const qs=document.querySelector('select[name="quantity"]');
+  if(qs){
+    const opts = lang==='ru'
+      ? [['','Выберите...'],['sample','Только образцы'],['500-999','500 – 999 шт'],['1000-4999','1 000 – 4 999 шт'],['5000+','от 5 000 шт']]
+      : [['','Select...'],['sample','Samples only'],['500-999','500 – 999 pcs'],['1000-4999','1,000 – 4,999 pcs'],['5000+','5,000+ pcs']];
+    const cur=qs.value; qs.innerHTML='';
+    opts.forEach(([v,t])=>{const o=document.createElement('option');o.value=v;o.textContent=t;if(v===cur)o.selected=true;qs.appendChild(o)});
+  }
+  // Update URL param for SEO
+  const url = new URL(window.location);
+  if(lang==='ru'){url.searchParams.set('lang','ru')}else{url.searchParams.delete('lang')}
+  window.history.replaceState({},'',url);
   try{localStorage.setItem('sealq_lang', lang)}catch(e){}
 }
 (function(){
   try{
+    const urlp = new URLSearchParams(window.location.search).get('lang');
+    if(urlp==='ru'){setLang('ru');return}
     const saved = localStorage.getItem('sealq_lang');
     if(saved==='ru') setLang('ru');
   }catch(e){}
