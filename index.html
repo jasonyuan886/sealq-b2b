@@ -9,7 +9,11 @@
 <meta property="og:title" content="SealQ — Handheld Vacuum Sealer Wholesale from China Factory" />
 <meta property="og:description" content="Factory-direct handheld vacuum sealers & embossed vacuum bags. CE/RoHS. MOQ from 500 pcs. OEM/ODM welcome." />
 <meta property="og:type" content="website" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔒</text></svg>" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B5FFF'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='900' font-size='18'%3ES%3C/text%3E%3C/svg%3E" />
+<meta property="og:image" content="https://go.freshlocksealer.com/images/hero.jpg" />
+<meta property="og:url" content="https://go.freshlocksealer.com/" />
+<meta name="theme-color" content="#0B5FFF" />
+<link rel="canonical" href="https://go.freshlocksealer.com/" />
 <style>
   :root{
     --primary:#0B5FFF;
@@ -859,18 +863,32 @@ function submitForm(e){
   e.preventDefault();
   const f = e.target;
   const data = Object.fromEntries(new FormData(f).entries());
-  // Simple mailto fallback (will open email client)
-  const subject = encodeURIComponent(`[SealQ Inquiry] ${data.product} - ${data.name} from ${data.company||'N/A'}`);
+  const subject = encodeURIComponent('[SealQ Inquiry] ' + (data.product||'General') + ' - ' + data.name + ' from ' + (data.company||'N/A'));
   const body = encodeURIComponent(
-    `Name: ${data.name}\nCompany: ${data.company}\nEmail: ${data.email}\nCountry: ${data.country}\nProduct: ${data.product}\nQuantity: ${data.quantity}\n\nMessage:\n${data.message}`
+    'Name: ' + data.name + '\nCompany: ' + (data.company||'') + '\nEmail: ' + data.email + '\nCountry: ' + (data.country||'') + '\nProduct: ' + (data.product||'') + '\nQuantity: ' + (data.quantity||'') + '\n\nMessage:\n' + (data.message||'')
   );
-  // Show success state
-  f.querySelector('h3,.sub,.form-row,.form-group,button,.form-note').style.display='none';
-  document.querySelectorAll('#inquiryForm h3,#inquiryForm .sub,#inquiryForm .form-row,#inquiryForm .form-group,#inquiryForm button,#inquiryForm .form-note').forEach(el=>el.style.display='none');
+  // Hide form, show success
+  f.querySelectorAll('h3,.sub,.form-row,.form-group,button,.form-note').forEach(el=>el.style.display='none');
   document.getElementById('formSuccess').style.display='block';
-  // Open email client
-  window.location.href = `mailto:jasonyuan866@gmail.com?subject=${subject}&body=${body}`;
+  // Open email client in new tab (won't leave current page)
+  window.open('mailto:jasonyuan866@gmail.com?subject='+subject+'&body='+body, '_blank');
 }
 </script>
+
+<!-- Floating contact buttons -->
+<style>
+.whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:999;display:flex;flex-direction:column;gap:10px}
+.whatsapp-float a{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:transform .2s}
+.whatsapp-float a:hover{transform:scale(1.08)}
+.wa-btn{background:#25D366}
+.tg-btn{background:#229ED9}
+.email-btn{background:#0B5FFF}
+@media(max-width:600px){.whatsapp-float{bottom:16px;right:16px}.whatsapp-float a{width:48px;height:48px;font-size:20px}}
+</style>
+<div class="whatsapp-float">
+  <a class="wa-btn" href="mailto:jasonyuan866@gmail.com?subject=SealQ%20Inquiry" title="Email Us">📧</a>
+  <a class="email-btn" href="#contact" title="Send Inquiry">📨</a>
+</div>
+
 </body>
 </html>
