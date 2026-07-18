@@ -313,8 +313,19 @@
     .hero-tag{position:static;margin-top:12px;border-radius:10px;padding:12px 14px}
     .factory-highlight .sample-emoji{font-size:48px!important}
   }
-  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
-  @media(max-width:600px){.gallery{grid-template-columns:repeat(2,1fr)!important}}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+  .gallery-grid img{border-radius:12px;aspect-ratio:1;object-fit:cover;cursor:zoom-in;transition:transform .2s}
+  .gallery-grid img:hover{transform:scale(1.03)}
+  @media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr)!important}}
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:92vw;max-height:92vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .lightbox .lb-close{position:absolute;top:20px;right:28px;color:#fff;font-size:36px;cursor:pointer;background:none;border:none;line-height:1}
+  .lightbox .lb-nav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:42px;cursor:pointer;background:rgba(255,255,255,.12);border:none;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+  .lightbox .lb-nav:hover{background:rgba(255,255,255,.25)}
+  .lightbox .lb-prev{left:24px}
+  .lightbox .lb-next{right:24px}
   button{-webkit-appearance:none;appearance:none}
   /* Mobile nav */
   .hamburger{display:none;background:none;border:none;font-size:24px;cursor:pointer;color:var(--dark)}
@@ -517,12 +528,16 @@
       </div>
     </div>
 
-    <!-- Gallery thumbnails -->
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px">
-      <img src="images/p1.jpg" loading="lazy" decoding="async" alt="Vacuum sealer in use" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
-      <img src="images/p3.jpg" loading="lazy" decoding="async" alt="Product set" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
-      <img src="images/p4.jpg" loading="lazy" decoding="async" alt="Kitchen scene" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
-      <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Vacuum bags range" style="border-radius:12px;aspect-ratio:1;object-fit:cover" />
+<!-- Gallery thumbnails (click to enlarge) -->
+    <div class="gallery-grid" id="galleryGrid">
+      <img src="images/p1.jpg" loading="lazy" decoding="async" alt="Handheld operation" data-full="images/p1.jpg" />
+      <img src="images/p3.jpg" loading="lazy" decoding="async" alt="USB-C charging set" data-full="images/p3.jpg" />
+      <img src="images/p4.jpg" loading="lazy" decoding="async" alt="Food storage scene" data-full="images/p4.jpg" />
+      <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Vacuum bags range" data-full="images/p2.jpg" />
+      <img src="images/p5.jpg" loading="lazy" decoding="async" alt="Vacuum storage kit bundle" data-full="images/p5.jpg" />
+      <img src="images/p6.jpg" loading="lazy" decoding="async" alt="Diamond texture detail" data-full="images/p6.jpg" />
+      <img src="images/p7.jpg" loading="lazy" decoding="async" alt="Multi-size bag set" data-full="images/p7.jpg" />
+      <img src="images/p8.jpg" loading="lazy" decoding="async" alt="Valve seal close-up" data-full="images/p8.jpg" />
     </div>
   </div>
 </section>
@@ -990,6 +1005,28 @@ function submitForm(e){
   <a class="wa-btn" href="mailto:jasonyuan866@gmail.com?subject=SealQ%20Inquiry" title="Email Us">📧</a>
   <a class="email-btn" href="#contact" title="Send Inquiry">📨</a>
 </div>
+
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLB(event)">
+  <button class="lb-close" onclick="closeLB()" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" onclick="navLB(-1);event.stopPropagation()" aria-label="Previous">‹</button>
+  <img id="lbImg" src="" alt="" onclick="event.stopPropagation()" />
+  <button class="lb-nav lb-next" onclick="navLB(1);event.stopPropagation()" aria-label="Next">›</button>
+</div>
+<script>
+(function(){
+  const imgs=Array.from(document.querySelectorAll('#galleryGrid img[data-full]'));
+  const lb=document.getElementById('lightbox');
+  const lbImg=document.getElementById('lbImg');
+  let idx=0;
+  function open(i){idx=i;lbImg.src=imgs[i].dataset.full;lb.classList.add('open');document.body.style.overflow='hidden'}
+  window.closeLB=function(e){if(e&&e.target!==lb&&e.target!==lb.querySelector('.lb-close'))return;lb.classList.remove('open');document.body.style.overflow=''};
+  window.navLB=function(d){idx=(idx+d+imgs.length)%imgs.length;lbImg.src=imgs[idx].dataset.full};
+  imgs.forEach((img,i)=>img.addEventListener('click',()=>open(i)));
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')navLB(-1);if(e.key==='ArrowRight')navLB(1)});
+})();
+</script>
 
 </body>
 </html>
