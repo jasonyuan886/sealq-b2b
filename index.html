@@ -321,7 +321,7 @@
   .gallery-grid img:hover{transform:scale(1.03)}
   @media(max-width:600px){
     .gallery-grid{grid-template-columns:1fr!important;gap:14px}
-    .gallery-grid img{aspect-ratio:auto;width:100%;height:auto;object-fit:contain;border-radius:12px}
+    .gallery-grid img{aspect-ratio:auto!important;width:100%!important;height:auto!important;max-width:100%;object-fit:contain;border-radius:12px;display:block;margin:0 auto;background:#f5f7fa}
   }
   /* Lightbox */
   .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
@@ -497,7 +497,7 @@
       <div class="product-card featured">
         <span class="tag" lang-en>FLAGSHIP MODEL</span>
         <span class="tag" lang-ru>ФЛАГМАН</span>
-        <img src="images/pvs02-main.jpg" alt="PVS02 Handheld Vacuum Sealer" class="product-img" loading="eager" decoding="async" width="400" height="400" />
+        <img src="images/pvs02-main.jpg" alt="PVS02 Handheld Vacuum Sealer" class="product-img" loading="eager" decoding="async" />
         <h3 lang-en>PVS02 Handheld Vacuum Sealer</h3>
         <h3 lang-ru>PVS02 Ручной вакуумный упаковщик</h3>
         <p class="desc" lang-en>Rechargeable portable air pump designed for valve-style vacuum containers, zipper bags, and external vacuum canisters. Compact, powerful, and travel-ready.</p>
@@ -520,7 +520,7 @@
       <div class="product-card">
         <span class="tag" lang-en>BEST SELLING ACCESSORY</span>
         <span class="tag" lang-ru>ХИТ ПРОДАЖ</span>
-        <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Embossed Vacuum Sealer Bags" class="product-img" width="400" height="400" />
+        <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Embossed Vacuum Sealer Bags" class="product-img" />
         <h3 lang-en>Embossed Vacuum Sealer Bags &amp; Rolls</h3>
         <h3 lang-ru>Гофрированные вакуумные пакеты и рулоны</h3>
         <p class="desc" lang-en>Co-extruded PA/PE embossed vacuum bags with one-side mesh channel for maximum air extraction. BPA-free, food-grade, freezer-, boil-, and sous-vide safe.</p>
@@ -540,14 +540,14 @@
 
 <!-- Gallery thumbnails (click to enlarge) -->
     <div class="gallery-grid" id="galleryGrid">
-      <img src="images/p1.jpg" loading="lazy" decoding="async" alt="Handheld operation" data-full="images/p1.jpg" width="400" height="400" />
-      <img src="images/p3.jpg" loading="lazy" decoding="async" alt="USB-C charging set" data-full="images/p3.jpg" width="400" height="400" />
-      <img src="images/p4.jpg" loading="lazy" decoding="async" alt="Food storage scene" data-full="images/p4.jpg" width="400" height="400" />
-      <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Vacuum bags range" data-full="images/p2.jpg" width="400" height="400" />
-      <img src="images/p5.jpg" loading="lazy" decoding="async" alt="Vacuum storage kit bundle" data-full="images/p5.jpg" width="400" height="400" />
-      <img src="images/p6.jpg" loading="lazy" decoding="async" alt="Diamond texture detail" data-full="images/p6.jpg" width="400" height="400" />
-      <img src="images/p7.jpg" loading="lazy" decoding="async" alt="Multi-size bag set" data-full="images/p7.jpg" width="400" height="400" />
-      <img src="images/p8.jpg" loading="lazy" decoding="async" alt="Valve seal close-up" data-full="images/p8.jpg" width="400" height="400" />
+      <img src="images/p1.jpg" loading="lazy" decoding="async" alt="Handheld operation" data-full="images/p1.jpg" />
+      <img src="images/p3.jpg" loading="lazy" decoding="async" alt="USB-C charging set" data-full="images/p3.jpg" />
+      <img src="images/p4.jpg" loading="lazy" decoding="async" alt="Food storage scene" data-full="images/p4.jpg" />
+      <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Vacuum bags range" data-full="images/p2.jpg" />
+      <img src="images/p5.jpg" loading="lazy" decoding="async" alt="Vacuum storage kit bundle" data-full="images/p5.jpg" />
+      <img src="images/p6.jpg" loading="lazy" decoding="async" alt="Diamond texture detail" data-full="images/p6.jpg" />
+      <img src="images/p7.jpg" loading="lazy" decoding="async" alt="Multi-size bag set" data-full="images/p7.jpg" />
+      <img src="images/p8.jpg" loading="lazy" decoding="async" alt="Valve seal close-up" data-full="images/p8.jpg" />
     </div>
   </div>
 </section>
