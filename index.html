@@ -317,9 +317,12 @@
     .hero-tag{position:static;margin-top:12px;border-radius:10px;padding:12px 14px}
   }
   .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
-  .gallery-grid img{border-radius:12px;aspect-ratio:1;object-fit:cover;cursor:zoom-in;transition:transform .2s}
+  .gallery-grid img{border-radius:12px;aspect-ratio:1;object-fit:cover;cursor:zoom-in;transition:transform .2s;width:100%;height:100%}
   .gallery-grid img:hover{transform:scale(1.03)}
-  @media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr)!important}}
+  @media(max-width:600px){
+    .gallery-grid{grid-template-columns:1fr!important;gap:14px}
+    .gallery-grid img{aspect-ratio:auto;width:100%;height:auto;object-fit:contain;border-radius:12px}
+  }
   /* Lightbox */
   .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
   .lightbox.open{display:flex}
@@ -537,10 +540,14 @@
 
 <!-- Gallery thumbnails (click to enlarge) -->
     <div class="gallery-grid" id="galleryGrid">
-      <img src="images/p1.jpg" loading="lazy" decoding="async" alt="Handheld vacuum sealer in action" data-full="images/p1.jpg" width="400" height="400" />
-      <img src="images/p3.jpg" loading="lazy" decoding="async" alt="USB-C rechargeable vacuum pump" data-full="images/p3.jpg" width="400" height="400" />
-      <img src="images/p4.jpg" loading="lazy" decoding="async" alt="Vacuum sealing food bags" data-full="images/p4.jpg" width="400" height="400" />
-      <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Embossed vacuum sealer bags" data-full="images/p2.jpg" width="400" height="400" />
+      <img src="images/p1.jpg" loading="lazy" decoding="async" alt="Handheld operation" data-full="images/p1.jpg" width="400" height="400" />
+      <img src="images/p3.jpg" loading="lazy" decoding="async" alt="USB-C charging set" data-full="images/p3.jpg" width="400" height="400" />
+      <img src="images/p4.jpg" loading="lazy" decoding="async" alt="Food storage scene" data-full="images/p4.jpg" width="400" height="400" />
+      <img src="images/p2.jpg" loading="lazy" decoding="async" alt="Vacuum bags range" data-full="images/p2.jpg" width="400" height="400" />
+      <img src="images/p5.jpg" loading="lazy" decoding="async" alt="Vacuum storage kit bundle" data-full="images/p5.jpg" width="400" height="400" />
+      <img src="images/p6.jpg" loading="lazy" decoding="async" alt="Diamond texture detail" data-full="images/p6.jpg" width="400" height="400" />
+      <img src="images/p7.jpg" loading="lazy" decoding="async" alt="Multi-size bag set" data-full="images/p7.jpg" width="400" height="400" />
+      <img src="images/p8.jpg" loading="lazy" decoding="async" alt="Valve seal close-up" data-full="images/p8.jpg" width="400" height="400" />
     </div>
   </div>
 </section>
