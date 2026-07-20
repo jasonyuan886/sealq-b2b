@@ -409,7 +409,7 @@
         <li><a href="#contact" lang-en>Contact</a><a href="#contact" lang-ru>Контакты</a></li>
       </ul>
     </nav>
-    <button class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('mobile-open')" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+    <button class="hamburger" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
     <a href="#contact" class="btn btn-primary">
       <span lang-en>Get Price List</span>
       <span lang-ru>Получить КП</span>
@@ -1054,6 +1054,28 @@ function submitForm(e){
   window.navLB=function(d){idx=(idx+d+imgs.length)%imgs.length;lbImg.src=imgs[idx].dataset.full};
   imgs.forEach((img,i)=>img.addEventListener('click',()=>open(i)));
   document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')navLB(-1);if(e.key==='ArrowRight')navLB(1)});
+})();
+
+// Mobile hamburger menu: auto-close on scroll / click-link / click-outside
+(function(){
+  const menuBtn=document.querySelector('.hamburger');
+  const navList=document.querySelector('nav ul');
+  if(!menuBtn||!navList)return;
+  function closeMenu(){navList.classList.remove('mobile-open')}
+  function toggleMenu(){navList.classList.toggle('mobile-open')}
+  menuBtn.onclick=e=>{e.stopPropagation();toggleMenu()};
+  // Close when user starts scrolling
+  let lastScroll=window.scrollY;
+  window.addEventListener('scroll',()=>{
+    if(navList.classList.contains('mobile-open')&&Math.abs(window.scrollY-lastScroll)>10)closeMenu();
+    lastScroll=window.scrollY;
+  },{passive:true});
+  // Close when clicking a nav link
+  navList.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  // Close when clicking outside nav
+  document.addEventListener('click',e=>{
+    if(navList.classList.contains('mobile-open')&&!e.target.closest('nav'))closeMenu();
+  });
 })();
 </script>
 
