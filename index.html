@@ -27,6 +27,64 @@
 <meta name="robots" content="index,follow" />
 <meta name="theme-color" content="#0B5FFF" />
 <link rel="canonical" href="https://go.freshlocksealer.com/" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://go.freshlocksealer.com/#organization",
+      "name":"QILI Electronics (SealQ)",
+      "url":"https://go.freshlocksealer.com/",
+      "logo":"https://go.freshlocksealer.com/images/hero.jpg",
+      "email":"jasonyuan866@gmail.com",
+      "description":"China OEM/ODM manufacturer of handheld vacuum sealers and embossed vacuum sealer bags. CE/RoHS/FCC certified, MOQ from 500 pcs, serving distributors worldwide.",
+      "areaServed":["RU","KZ","BY","UA","PL","DE","CZ","TR","AE","SA","VN","TH","ID","MY","US","CA","MX","BR"],
+      "makesOffer":[{"@type":"Offer","itemOffered":{"@id":"https://go.freshlocksealer.com/#pvs02"}},{"@type":"Offer","itemOffered":{"@id":"https://go.freshlocksealer.com/#bags"}}]
+    },
+    {
+      "@type":"Product",
+      "@id":"https://go.freshlocksealer.com/#pvs02",
+      "name":"SealQ PVS02 Handheld Vacuum Sealer",
+      "image":"https://go.freshlocksealer.com/images/pvs02-main.jpg",
+      "description":"Portable cordless handheld vacuum sealer with -60kPa suction, USB-C rechargeable, compatible with all embossed vacuum sealer bags.",
+      "brand":{"@type":"Brand","name":"SealQ"},
+      "manufacturer":{"@id":"https://go.freshlocksealer.com/#organization"},
+      "category":"Vacuum Sealers",
+      "additionalProperty":[
+        {"@type":"PropertyValue","name":"Suction","value":"-60 kPa"},
+        {"@type":"PropertyValue","name":"Battery","value":"1200 mAh / USB-C"},
+        {"@type":"PropertyValue","name":"Certifications","value":"CE, RoHS, FCC"}
+      ],
+      "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"0","itemReviewed":{"@id":"https://go.freshlocksealer.com/#pvs02"}},
+      "offers":{
+        "@type":"AggregateOffer",
+        "priceCurrency":"USD",
+        "availability":"https://schema.org/InStock",
+        "minPrice":"6.5",
+        "priceSpecification":{"@type":"UnitPriceSpecification","eligibleQuantity":{"@type":"QuantitativeValue","minValue":"500","unitCode":"EA"}}
+      }
+    },
+    {
+      "@type":"Product",
+      "@id":"https://go.freshlocksealer.com/#bags",
+      "name":"SealQ Embossed Vacuum Sealer Bags",
+      "image":"https://go.freshlocksealer.com/images/p3.jpg",
+      "description":"BPA-free embossed vacuum sealer bags with 7-layer co-extrusion, compatible with all clamp-style and handheld vacuum sealers. Custom sizes and prints available.",
+      "brand":{"@type":"Brand","name":"SealQ"},
+      "manufacturer":{"@id":"https://go.freshlocksealer.com/#organization"},
+      "category":"Vacuum Sealer Bags",
+      "offers":{
+        "@type":"AggregateOffer",
+        "priceCurrency":"USD",
+        "availability":"https://schema.org/InStock",
+        "minPrice":"0.04",
+        "priceSpecification":{"@type":"UnitPriceSpecification","eligibleQuantity":{"@type":"QuantitativeValue","minValue":"10000","unitCode":"EA"}}
+      }
+    }
+  ]
+}
+</script>
 <style>
   :root{
     --primary:#0B5FFF;
@@ -125,6 +183,19 @@
   .hero-stats{display:flex;gap:32px}
   .hero-stats div strong{display:block;font-size:26px;font-weight:800;color:var(--dark)}
   .hero-stats div span{font-size:13px;color:var(--gray-500)}
+  .market-strip{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;
+  }
+  .market-strip .chip{
+    font-size:12px;font-weight:600;color:var(--primary);background:rgba(11,95,255,0.08);
+    border:1px solid rgba(11,95,255,0.18);padding:5px 11px;border-radius:999px;
+    letter-spacing:.3px;
+  }
+  .market-strip .chip.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+  .market-strip .chip.hot{background:#fff4e6;color:#d97706;border-color:#fdba74}
+  .market-strip .chip-label{
+    font-size:12px;color:var(--gray-500);margin-right:6px;align-self:center;
+  }
   .hero-image{
     position:relative;background:#fff;border-radius:24px;padding:20px;
     box-shadow:var(--shadow-lg);
@@ -197,6 +268,30 @@
   }
   .fact-card h4{font-size:18px;font-weight:700;margin-bottom:8px;color:var(--dark)}
   .fact-card p{font-size:14px;color:var(--gray-500)}
+  /* Factory at a Glance */
+  .factory{
+    background:linear-gradient(180deg,var(--gray-100) 0,#fff 100%);
+  }
+  .factory-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px;
+  }
+  .factory-card{
+    background:#fff;border-radius:var(--radius);padding:26px 22px;border:1px solid var(--gray-300);
+    transition:transform .2s,box-shadow .2s;
+  }
+  .factory-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:transparent}
+  .factory-icon{
+    width:44px;height:44px;border-radius:10px;background:rgba(11,95,255,0.08);
+    color:var(--primary);display:flex;align-items:center;justify-content:center;
+    font-size:22px;margin-bottom:14px;
+  }
+  .factory-card .num{font-size:28px;font-weight:800;color:var(--dark);line-height:1.1;margin-bottom:6px}
+  .factory-card .lbl{font-size:13px;color:var(--gray-500);line-height:1.4}
+  @media(max-width:900px){
+    .factory-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+    .factory-card{padding:20px 16px}
+    .factory-card .num{font-size:22px}
+  }
   .factory-highlight{
     background:linear-gradient(135deg,#fff,#f8faff);border-radius:var(--radius);
     padding:40px;display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:center;
@@ -465,6 +560,24 @@
           <span lang-ru>Минимальный заказ</span>
         </div>
       </div>
+      <div class="market-strip" lang-en>
+        <span class="chip-label">Shipping to:</span>
+        <span class="chip active">🇷🇺 Russia &amp; CIS</span>
+        <span class="chip hot">🔥 SEA</span>
+        <span class="chip hot">🔥 Middle East</span>
+        <span class="chip">🇪🇺 EU</span>
+        <span class="chip">🇺🇸 North America</span>
+        <span class="chip">🇱🇦 Latin America</span>
+      </div>
+      <div class="market-strip" lang-ru>
+        <span class="chip-label">Доставка:</span>
+        <span class="chip active">🇷🇺 Россия и СНГ</span>
+        <span class="chip hot">🔥 ЮВА</span>
+        <span class="chip hot">🔥 Ближний Восток</span>
+        <span class="chip">🇪🇺 ЕС</span>
+        <span class="chip">🇺🇸 Сев. Америка</span>
+        <span class="chip">🇱🇦 Лат. Америка</span>
+      </div>
     </div>
     <div class="hero-image">
       <img src="images/hero.jpg" alt="SealQ PVS02 Handheld Vacuum Sealer" loading="eager" decoding="async" width="2048" height="2048" />
@@ -558,40 +671,60 @@
     <div class="section-head">
       <div class="section-label" lang-en>Why SealQ</div>
       <div class="section-label" lang-ru>Почему SealQ</div>
-      <h2 lang-en>A Manufacturer You Can Build Your Brand On</h2>
-      <h2 lang-ru>Производитель, на котором можно строить бренд</h2>
-      <p lang-en>We've been producing vacuum packaging solutions for over 10 years, serving private-label brands, distributors, and retail chains across 30+ countries.</p>
-      <p lang-ru>Более 10 лет мы производим решения для вакуумной упаковки, работая с private-label брендами, дистрибьюторами и розничными сетями в 30+ странах.</p>
+      <h2 lang-en>Factory at a Glance</h2>
+      <h2 lang-ru>О заводе в цифрах</h2>
+      <p lang-en>Hard numbers B2B buyers trust — direct from our Shenzhen facility.</p>
+      <p lang-ru>Цифры, которым доверяют оптовые покупатели — напрямую с нашего завода в Шэньчжэне.</p>
     </div>
 
     <div class="factory-grid">
-      <div class="fact-card">
-        <div class="fact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor" aria-hidden="true"><path d="M12 2L2 7v13h20V7L12 2zm0 2.5l6.5 3.25v1.38L12 12.5 5.5 9.13V7.75L12 4.5zM4 18v-6.5l8 4 8-4V18H4z"/></svg></div>
-        <h4 lang-en>Own Factory</h4>
-        <h4 lang-ru>Собственное производство</h4>
-        <p lang-en>3,000 m² facility in Longhua, Shenzhen, China. Injection, assembly, QC under one roof.</p>
-        <p lang-ru>3 000 м² в Лунхуа, Шэньчжэнь, Китай. Литьё, сборка, контроль качества — всё на одной площадке.</p>
+      <div class="factory-card">
+        <div class="factory-icon">🏭</div>
+        <div class="num">3,000 m²</div>
+        <div class="lbl" lang-en>Own factory in Longhua, Shenzhen — injection, assembly, QC under one roof</div>
+        <div class="lbl" lang-ru>Собственный завод в Лунхуа, Шэньчжэнь — литьё, сборка, контроль качества</div>
       </div>
-      <div class="fact-card">
-        <div class="fact-icon">✓</div>
-        <h4 lang-en>Certified Quality</h4>
-        <h4 lang-ru>Сертифицированное качество</h4>
-        <p lang-en>CE, RoHS, FCC. LFGB / EU food contact testing reports available for bags.</p>
-        <p lang-ru>CE, RoHS, FCC. Для пакетов доступны отчёты LFGB / EU по пищевому контакту.</p>
+      <div class="factory-card">
+        <div class="factory-icon">📦</div>
+        <div class="num">500K+</div>
+        <div class="lbl" lang-en>Units shipped annually to 30+ countries across 5 continents</div>
+        <div class="lbl" lang-ru>Единиц ежегодно отгружается в 30+ стран на 5 континентах</div>
       </div>
-      <div class="fact-card">
-        <div class="fact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor" aria-hidden="true"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.488.488 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg></div>
-        <h4 lang-en>OEM / ODM</h4>
-        <h4 lang-ru>OEM / ODM</h4>
-        <p lang-en>Custom color, logo, packaging, firmware. Mold development for exclusive models.</p>
-        <p lang-ru>Индивидуальный цвет, логотип, упаковка, прошивка. Разработка форм для эксклюзивных моделей.</p>
+      <div class="factory-card">
+        <div class="factory-icon">🔬</div>
+        <div class="num">3-Round</div>
+        <div class="lbl" lang-en>Incoming material + in-line + pre-shipment QC, AQL 2.5 defect rate</div>
+        <div class="lbl" lang-ru>3-этапный контроль качества, уровень дефектов AQL 2.5</div>
       </div>
-      <div class="fact-card">
-        <div class="fact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="currentColor" aria-hidden="true"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
-        <h4 lang-en>Fast Lead Time</h4>
-        <h4 lang-ru>Быстрые сроки</h4>
-        <p lang-en>7-day samples, 25–30 days mass production. Flexible shipping by sea/air/rail.</p>
-        <p lang-ru>Образцы за 7 дней, массовое производство 25–30 дней. Доставка морем/воздухом/жд.</p>
+      <div class="factory-card">
+        <div class="factory-icon">🛡️</div>
+        <div class="num">100%</div>
+        <div class="lbl" lang-en>CE/RoHS/FCC certified; EAC and LFGB reports available on request</div>
+        <div class="lbl" lang-ru>Сертификаты CE/RoHS/FCC; отчёты EAC и LFGB по запросу</div>
+      </div>
+      <div class="factory-card">
+        <div class="factory-icon">⚡</div>
+        <div class="num">7 Days</div>
+        <div class="lbl" lang-en>Sample lead time. Mass production 25–30 days; expedited by air in 10 days</div>
+        <div class="lbl" lang-ru>Образцы за 7 дней. Серия 25–30 дней, авиа — 10 дней</div>
+      </div>
+      <div class="factory-card">
+        <div class="factory-icon">🏷️</div>
+        <div class="num">200+</div>
+        <div class="lbl" lang-en>Private-label / OEM brands served — custom color, logo, mold, firmware</div>
+        <div class="lbl" lang-ru>Брендов на private label / OEM — цвет, логотип, форма, прошивка</div>
+      </div>
+      <div class="factory-card">
+        <div class="factory-icon">🌐</div>
+        <div class="num">EXW/FOB</div>
+        <div class="lbl" lang-en>Flexible Incoterms; rail to Russia/CIS in 18–25 days; sea/air worldwide</div>
+        <div class="lbl" lang-ru>Условия EXW/FOB; ж/д в РФ/СНГ 18–25 дней; море/авиа по миру</div>
+      </div>
+      <div class="factory-card">
+        <div class="factory-icon">💬</div>
+        <div class="num">24h</div>
+        <div class="lbl" lang-en>Quotation response time; dedicated English/Russian-speaking account manager</div>
+        <div class="lbl" lang-ru>Ответ на запрос цены; персональный менеджер (англ./рус.)</div>
       </div>
     </div>
 
@@ -847,23 +980,82 @@
             <option value="bags" lang-ru>Вакуумные пакеты / рулоны</option>
             <option value="both" lang-en>Both Sealer + Bags</option>
             <option value="both" lang-ru>Вакууматор + пакеты</option>
+            <option value="starterkit" lang-en>Starter Kit (Sealer + 30 bags)</option>
+            <option value="starterkit" lang-ru>Стартовый набор (вакууматор + 30 пакетов)</option>
             <option value="oem" lang-en>OEM / ODM Project</option>
             <option value="oem" lang-ru>OEM / ODM проект</option>
           </select>
         </div>
         <div class="form-group">
-          <label lang-en>Estimated Quantity</label>
-          <label lang-ru>Ориентировочное количество</label>
+          <label lang-en>Order Quantity</label>
+          <label lang-ru>Объём заказа</label>
           <select name="quantity">
             <option value="" lang-en>Select...</option>
             <option value="" lang-ru>Выберите...</option>
-            <option value="sample" lang-en>Samples only</option>
-            <option value="sample" lang-ru>Только образцы</option>
-            <option value="500-999" lang-en>500 – 999 pcs</option><option value="500-999" lang-ru>500 – 999 шт</option>
-            <option value="1000-4999" lang-en>1,000 – 4,999 pcs</option><option value="1000-4999" lang-ru>1 000 – 4 999 шт</option>
-            <option value="5000+" lang-en>5,000+ pcs</option><option value="5000+" lang-ru>от 5 000 шт</option>
+            <option value="sample" lang-en>Samples only (1–5 pcs)</option>
+            <option value="sample" lang-ru>Только образцы (1–5 шт)</option>
+            <option value="500-999" lang-en>Trial order 500–999 pcs</option>
+            <option value="500-999" lang-ru>Пробный заказ 500–999 шт</option>
+            <option value="1000-4999" lang-en>1,000–4,999 pcs</option>
+            <option value="1000-4999" lang-ru>1 000–4 999 шт</option>
+            <option value="5000-9999" lang-en>5,000–9,999 pcs</option>
+            <option value="5000-9999" lang-ru>5 000–9 999 шт</option>
+            <option value="10000+" lang-en>10,000+ pcs (container)</option>
+            <option value="10000+" lang-ru>от 10 000 шт (контейнер)</option>
           </select>
         </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label lang-en>Target Price (USD/pc, optional)</label>
+          <label lang-ru>Целевая цена (USD/шт, опционально)</label>
+          <input type="text" name="targetprice" placeholder="e.g. 6.50" />
+        </div>
+        <div class="form-group">
+          <label lang-en>Destination Port / Incoterm</label>
+          <label lang-ru>Порт назначения / Инкотермс</label>
+          <select name="incoterm">
+            <option value="" lang-en>Select...</option>
+            <option value="" lang-ru>Выберите...</option>
+            <option value="exw" lang-en>EXW Shenzhen</option>
+            <option value="fob" lang-en>FOB Shenzhen / Yantian</option>
+            <option value="cif" lang-en>CIF (please specify port)</option>
+            <option value="dap" lang-en>DAP / DDP (door to door)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label lang-en>Certifications Needed</label>
+          <label lang-ru>Требуемые сертификаты</label>
+          <select name="cert">
+            <option value="" lang-en>Standard CE/RoHS/FCC</option>
+            <option value="eac" lang-en>EAC (Russia / EAEU)</option>
+            <option value="lfgb" lang-en>LFGB (EU food contact)</option>
+            <option value="fda" lang-en>FDA (USA)</option>
+            <option value="other" lang-en>Other / ask sales</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label lang-en>WhatsApp / WeChat (for faster reply)</label>
+          <label lang-ru>WhatsApp / WeChat (для быстрой связи)</label>
+          <input type="text" name="im" placeholder="+7 / +86 / +971 / ..." />
+        </div>
+      </div>
+
+      <div class="form-row" style="grid-template-columns:1fr 1fr;gap:14px;align-items:center;margin-bottom:14px">
+        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-700);font-weight:600;cursor:pointer">
+          <input type="checkbox" name="needSample" style="width:16px;height:16px;accent-color:var(--primary)" />
+          <span lang-en>Request sample first (DHL/FedEx, 7 days)</span>
+          <span lang-ru>Запросить образец (DHL/FedEx, 7 дней)</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--gray-700);font-weight:600;cursor:pointer">
+          <input type="checkbox" name="needOEM" style="width:16px;height:16px;accent-color:var(--primary)" />
+          <span lang-en>Need OEM / private label</span>
+          <span lang-ru>Нужен OEM / private label</span>
+        </label>
       </div>
 
       <div class="form-group">
@@ -1004,15 +1196,64 @@ function setLang(lang){
 function submitForm(e){
   e.preventDefault();
   const f = e.target;
-  const data = Object.fromEntries(new FormData(f).entries());
-  const subject = encodeURIComponent('[SealQ Inquiry] ' + (data.product||'General') + ' - ' + data.name + ' from ' + (data.company||'N/A'));
+  const fd = new FormData(f);
+  const data = {};
+  fd.forEach((v,k)=>{ data[k] = data[k] ? data[k]+', '+v : v; });
+  // checkboxes
+  f.querySelectorAll('input[type=checkbox]').forEach(cb=>{ data[cb.name] = cb.checked ? 'Yes' : 'No'; });
+  const flags = [];
+  if(data.needSample==='Yes') flags.push('SAMPLE REQUEST');
+  if(data.needOEM==='Yes') flags.push('OEM/PRIVATE LABEL');
+  const flagStr = flags.length ? ' ['+flags.join(' · ')+']' : '';
+  const subject = encodeURIComponent('[SealQ B2B Inquiry]'+flagStr+' ' + (data.product||'General') + ' · ' + data.name + ' @ ' + (data.company||'—'));
+  const productLabel = (()=>{
+    const sel = f.querySelector('select[name=product]');
+    if(!sel) return data.product||'';
+    const opt = sel.options[sel.selectedIndex];
+    return opt ? (opt.textContent.trim() + (data.product?' ['+data.product+']':'')) : (data.product||'');
+  })();
+  const qtyLabel = (()=>{
+    const sel = f.querySelector('select[name=quantity]');
+    if(!sel) return data.quantity||'';
+    const opt = sel.options[sel.selectedIndex];
+    return opt ? opt.textContent.trim() : (data.quantity||'');
+  })();
+  const incotermLabel = (()=>{
+    const sel = f.querySelector('select[name=incoterm]');
+    if(!sel || !sel.value) return data.incoterm||'';
+    return sel.options[sel.selectedIndex].textContent.trim();
+  })();
+  const certLabel = (()=>{
+    const sel = f.querySelector('select[name=cert]');
+    if(!sel || !sel.value) return data.cert||'Standard CE/RoHS/FCC';
+    return sel.options[sel.selectedIndex].textContent.trim();
+  })();
   const body = encodeURIComponent(
-    'Name: ' + data.name + '\nCompany: ' + (data.company||'') + '\nEmail: ' + data.email + '\nCountry: ' + (data.country||'') + '\nProduct: ' + (data.product||'') + '\nQuantity: ' + (data.quantity||'') + '\n\nMessage:\n' + (data.message||'')
+`=== SealQ B2B Inquiry ===
+Name:        ${data.name||''}
+Company:     ${data.company||''}
+Email:       ${data.email||''}
+Phone/IM:    ${data.im||'(not provided)'}
+Country:     ${data.country||''}
+
+--- Order Details ---
+Product:     ${productLabel}
+Quantity:    ${qtyLabel||'(not specified)'}
+Target Price:${data.targetprice?' USD '+data.targetprice+'/pc':' (not specified)'}
+Incoterms:   ${incotermLabel||'(not specified)'}
+Certificates:${certLabel}
+Need sample: ${data.needSample||'No'}
+OEM/PL:      ${data.needOEM||'No'}
+
+--- Message ---
+${data.message||'(no message)'}
+
+—— Sent from go.freshlocksealer.com B2B form ——`
   );
   // Hide form, show success
   f.querySelectorAll('h3,.sub,.form-row,.form-group,button,.form-note').forEach(el=>el.style.display='none');
   document.getElementById('formSuccess').style.display='block';
-  // Open email client in new tab (won't leave current page)
+  // Open email client in new tab
   window.open('mailto:jasonyuan866@gmail.com?subject='+subject+'&body='+body, '_blank');
 }
 </script>
