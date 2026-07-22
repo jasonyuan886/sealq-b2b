@@ -1238,7 +1238,7 @@ function submitForm(e){
 .tk-btn{background:#000}
 .ig-btn{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
 @media(max-width:600px){
-  .whatsapp-float{bottom:12px;right:12px;gap:8px;opacity:0.55;transition:opacity .25s}
+  .whatsapp-float{bottom:12px;right:12px;gap:8px;opacity:0.4;transition:opacity .25s}
   .whatsapp-float:hover,.whatsapp-float:focus-within{opacity:1}
   .whatsapp-float a{width:40px;height:40px}
   .whatsapp-float a svg{width:17px;height:17px}
@@ -1290,13 +1290,16 @@ function submitForm(e){
   let lastScroll=window.scrollY;
   window.addEventListener('scroll',()=>{
     if(navList.classList.contains('mobile-open')&&Math.abs(window.scrollY-lastScroll)>10)closeMenu();
-    // Float buttons fade out near contact section to avoid covering form
+    // Float buttons auto-hide in factory/contact sections to avoid covering content
     const fb=document.querySelector('.whatsapp-float');
     if(fb){
-      const contact=document.getElementById('contact');
-      if(contact){
-        const rect=contact.getBoundingClientRect();
-        fb.style.opacity=(rect.top<window.innerHeight*0.7)?'0.25':'1';
+      const fac=document.getElementById('factory');
+      const hero=document.querySelector('.hero');
+      if(fac){
+        const r=fac.getBoundingClientRect();
+        const hide=r.top<window.innerHeight*0.5;
+        fb.style.opacity=hide?'0':'0.55';
+        fb.style.pointerEvents=hide?'none':'auto';
       }
     }
     lastScroll=window.scrollY;
