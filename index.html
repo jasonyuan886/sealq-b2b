@@ -1260,8 +1260,8 @@ ${data.message||'(no message)'}
   .factory{padding-bottom:80px}
   .factory-grid{gap:10px}
   /* 最后一行（第7/8张卡，偶数布局是nth-child(2n)在右列）让出浮动按钮空间 */
-  .factory-card:nth-child(n+7){padding-right:14px}
-  .contact{padding-bottom:80px}
+  .factory-card:nth-child(even){padding-right:56px}.factory-card:nth-child(odd){padding-right:0}
+  .contact{padding-bottom:80px}.contact-form{padding-right:56px}
 }
 </style>
 <div class="whatsapp-float">
