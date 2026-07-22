@@ -1253,13 +1253,14 @@ ${data.message||'(no message)'}
 .tk-btn{background:#000}
 .ig-btn{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
 @media(max-width:600px){
-  .whatsapp-float{bottom:12px;right:12px;gap:8px}
-  .whatsapp-float a{width:42px;height:42px}
-  .whatsapp-float a svg{width:18px;height:18px}
-  .factory{padding-bottom:90px}
+  .whatsapp-float{bottom:12px;right:12px;gap:8px;opacity:0.55;transition:opacity .25s}
+  .whatsapp-float:hover,.whatsapp-float:focus-within{opacity:1}
+  .whatsapp-float a{width:40px;height:40px}
+  .whatsapp-float a svg{width:17px;height:17px}
+  .factory{padding-bottom:80px}
   .factory-grid{gap:10px}
-  .factory-card:last-child{margin-right:52px}
-  .factory-card:nth-last-child(2){margin-right:0}
+  /* 最后一行（第7/8张卡，偶数布局是nth-child(2n)在右列）让出浮动按钮空间 */
+  .factory-card:nth-child(n+7){padding-right:14px}
   .contact{padding-bottom:80px}
 }
 </style>
