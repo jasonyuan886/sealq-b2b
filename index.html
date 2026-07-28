@@ -511,6 +511,9 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
       <span lang-en>Get Price List</span>
       <span lang-ru>Получить КП</span>
     </a>
+    <a href="/wholesale" class="btn btn-outline" style="font-size:13px;padding:10px 16px" title="US/EU English Wholesale">
+      🌍 EN
+    </a>
   </div>
 </header>
 
@@ -522,7 +525,7 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
         <span lang-en>Factory-direct · Since 2015</span>
         <span lang-ru>Напрямую с завода · с 2015</span>
       </div>
-      <h1 lang-en>Handheld Vacuum Sealers, <span lang-en>Factory Wholesale</span><span lang-ru>Опт от производителя</span></h1>
+      <h1 lang-en>Handheld Vacuum Sealers, <span lang-en>Factory Wholesale</span></h1>
       <h1 lang-ru>Ручные вакуумные упаковщики <span lang-ru>оптом от производителя</span></h1>
       <p class="lead" lang-en>
         CE &amp; RoHS certified portable vacuum sealers and embossed vacuum bags from China's trusted OEM/ODM manufacturer. MOQ from 500 pcs. Samples shipped in 7 days.
@@ -1204,6 +1207,12 @@ function setLang(lang){
   const url = new URL(window.location);
   if(lang==='ru'){url.searchParams.set('lang','ru')}else{url.searchParams.delete('lang')}
   window.history.replaceState({},'',url);
+  // Sync meta language tags
+  const cl = document.querySelector('meta[http-equiv="Content-Language"]');
+  if(cl) cl.content = lang==='ru' ? 'ru' : 'en';
+  const ogl = document.querySelector('meta[property="og:locale"]');
+  if(ogl) ogl.content = lang==='ru' ? 'ru_RU' : 'en_US';
+  document.documentElement.lang = lang;
   try{localStorage.setItem('sealq_lang', lang)}catch(e){}
 }
 (function(){
