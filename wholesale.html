@@ -55,7 +55,7 @@ h1{font-size:clamp(32px,4.5vw,52px);font-weight:800;line-height:1.1;letter-spaci
 h1 em{font-style:normal;color:var(--blue);position:relative}
 .lead{font-size:18px;color:var(--gray);margin-bottom:32px;max-width:540px;line-height:1.7}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px}
-.hero-stats{display:flex;gap:32px}
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap}
 .hero-stats div{text-align:left}
 .hero-stats strong{display:block;font-size:28px;font-weight:800;color:var(--dark)}
 .hero-stats span{font-size:13px;color:var(--gray);font-weight:500}
@@ -188,6 +188,9 @@ footer{background:var(--dark);color:rgba(255,255,255,.6);padding:40px 0;border-t
 
 /* Responsive */
 @media(max-width:900px){
+  .hero-stats{gap:16px}
+  .hero-stats strong{font-size:22px}
+  .hero-stats div{min-width:calc(50% - 8px)}
   .hero-grid,.product-overview,.oem-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
   .pricing-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
@@ -246,7 +249,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.6);padding:40px 0;border-t
       </div>
     </div>
     <div class="hero-image">
-      <img src="images/hero.jpg" alt="SealQ PVS02 Handheld Vacuum Sealer with embossed vacuum bags" loading="eager" width="800" height="800" />
+      <img src="images/pvs02-main.jpg" alt="SealQ PVS02 Handheld Vacuum Sealer with embossed vacuum bags" loading="eager" width="800" height="800" />
       <div class="hero-tag">
         <strong>PVS02 — Portable Vacuum Sealer</strong>
         <span>-60kPa · USB-C · 1200mAh · Auto shutoff</span>
