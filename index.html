@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SealQ by QILI Electronics | Handheld Vacuum Sealers & Vacuum Bags Wholesale</title>
 <meta name="description" content="SealQ by QILI Electronics — China factory direct wholesale handheld vacuum sealers (PVS02) and embossed vacuum sealer bags. CE/RoHS certified, MOQ 500 pcs, OEM/ODM, 7-day lead time." />
 <meta name="keywords" content="handheld vacuum sealer wholesale, portable vacuum sealer manufacturer, vacuum sealer bags supplier, OEM vacuum sealer China, CE vacuum sealer, PVS02, вакуумный упаковщик оптом, ручной вакууматор" />
@@ -402,10 +403,18 @@
     font-size:13px;
   }
 
-  /* Russian hidden by default */
-  [lang-ru]{display:none !important}
-  body.ru [lang-en]{display:none !important}
-  body.ru [lang-ru]{display:block !important}
+  /* Bilingual display: EN visible by default, RU only when body has .ru */
+  [lang-ru]{display:none !important;visibility:hidden !important}
+  [lang-en]{display:revert;visibility:visible}
+  body.ru [lang-en]{display:none !important;visibility:hidden !important}
+  body.ru [lang-ru]{display:revert !important;visibility:visible !important}
+  /* Inline elements like spans within same line should use inline not block */
+  span[lang-ru]{display:none !important}
+  body.ru span[lang-en]{display:none !important}
+  body.ru span[lang-ru]{display:inline !important}
+  /* Hide lang-switching elements from copy-paste when hidden */
+  body:not(.ru) [lang-ru] *{display:none !important}
+  body.ru [lang-en] *{display:none !important}
   body.ru .hero{background:linear-gradient(135deg,#FFF5EC 0%,#F5FFF9 100%)}
 
   /* Responsive */
@@ -572,7 +581,7 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
         <span class="chip hot">🔥 Middle East</span>
         <span class="chip">🇪🇺 EU</span>
         <span class="chip">🇺🇸 North America</span>
-        <span class="chip">🇱🇦 Latin America</span>
+        <span class="chip">🌎 Latin America</span>
       </div>
       <div class="market-strip" lang-ru>
         <span class="chip-label">Доставка:</span>
@@ -581,7 +590,7 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
         <span class="chip hot">🔥 Ближний Восток</span>
         <span class="chip">🇪🇺 ЕС</span>
         <span class="chip">🇺🇸 Сев. Америка</span>
-        <span class="chip">🇱🇦 Лат. Америка</span>
+        <span class="chip">🌎 Лат. Америка</span>
       </div>
     </div>
     <div class="hero-image">
@@ -590,8 +599,8 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
         <div>
           <strong lang-en>PVS02 — Portable Vacuum Sealer</strong>
           <strong lang-ru>PVS02 — Портативный вакууматор</strong><br/>
-          <span lang-en>-60 kPa suction · USB-C rechargeable · 1200mAh · Up to 50 bags/charge</span>
-          <span lang-ru>-60 кПа всасывание · USB-C · 1200 мАч · до 50 пакетов на заряде</span>
+          <span lang-en>-60 kPa suction · USB-C rechargeable · 1200mAh · 80-100 seals per charge</span>
+          <span lang-ru>-60 кПа всасывание · USB-C · 1200 мАч · 80-100 запаиваний от заряда</span>
         </div>
       </div>
     </div>
@@ -625,7 +634,7 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
           <li><strong lang-en>Power</strong><strong lang-ru>Мощность</strong><span>5 W</span></li>
           <li><strong lang-en>Battery</strong><strong lang-ru>Аккумулятор</strong><span>1200 mAh Li-ion, USB-C (DC 5V/1A)</span></li>
           <li><strong lang-en>Charging Time</strong><strong lang-ru>Время зарядки</strong><span>2 hrs</span></li>
-          <li><strong lang-en>Working Time</strong><strong lang-ru>Время работы</strong><span lang-en>Up to 50 bags per charge (auto shut-off ≤120s per cycle)</span><span lang-ru>До 50 пакетов от одного заряда (автоотключение ≤120с за цикл)</span></li>
+          <li><strong lang-en>Working Time</strong><strong lang-ru>Время работы</strong><span lang-en>80-100 seals per charge (auto shut-off ≤120s per cycle, 30s cooldown)</span><span lang-ru>80-100 запаиваний от одного заряда (автоотключение ≤120с за цикл, пауза 30с)</span></li>
           <li><strong lang-en>Noise Level</strong><strong lang-ru>Уровень шума</strong><span>&lt; 60 dB</span></li>
           <li><strong lang-en>Material</strong><strong lang-ru>Материал</strong><span lang-en>ABS + Silicone, white body with electroplated silver diamond-pattern lid</span><span lang-ru>ABS + Силикон, белый корпус с серебристой алмазной крышкой</span></li>
           <li><strong lang-en>Dimensions / Weight</strong><strong lang-ru>Размеры / Вес</strong><span lang-en>Φ48 × 195 mm / 210 g (bare unit) · 350 g (retail box incl. accessories)</span><span lang-ru>Φ48 × 195 мм / 210 г (без упаковки) · 350 г (в розничной коробке с аксессуарами)</span></li>
@@ -1179,6 +1188,11 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
 })();
 
 function setLang(lang){
+    document.documentElement.lang = lang;
+    const cl = document.querySelector('meta[http-equiv="Content-Language"]');
+    if(cl) cl.setAttribute('content', lang);
+    const ogl = document.querySelector('meta[property="og:locale"]');
+    if(ogl) ogl.setAttribute('content', lang==='ru'?'ru_RU':'en_US');
   document.body.classList.toggle('ru', lang==='ru');
   document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));
   document.querySelector(`.lang-switch button:nth-child(${lang==='en'?1:2})`).classList.add('active');
