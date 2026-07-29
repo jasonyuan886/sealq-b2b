@@ -147,15 +147,6 @@ table.bags .note{font-size:12px;color:var(--gray)}
 .oem-item strong{display:block;font-size:14px;font-weight:700;margin-bottom:4px}
 .oem-item span{font-size:13px;color:var(--gray)}
 
-/* FAQ */
-.faq-list{max-width:820px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--light-gray);padding:20px 0}
-.faq-q{font-size:16px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
-.faq-q::after{content:'+';font-size:24px;color:var(--blue);font-weight:300;flex-shrink:0;line-height:1}
-.faq-item.open .faq-q::after{content:'−'}
-.faq-a{display:none;margin-top:12px;font-size:14px;color:var(--gray);line-height:1.7;padding-right:40px}
-.faq-item.open .faq-a{display:block}
-
 /* Contact/Form */
 .contact-section{background:var(--dark);color:#fff;border-radius:24px;padding:56px;margin-top:40px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
@@ -206,6 +197,26 @@ footer{background:var(--dark);color:rgba(255,255,255,.6);padding:40px 0;border-t
   section{padding:56px 0}
   .hero{padding:48px 0 40px}
 }
+
+.faq{padding:90px 0;background:var(--light)}
+.faq-list{max-width:860px;margin:40px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border-radius:14px;box-shadow:var(--shadow);overflow:hidden;transition:box-shadow .2s}
+.faq-item:hover{box-shadow:0 8px 30px rgba(11,31,58,.12)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:none;border:none;text-align:left;cursor:pointer;font-size:16px;font-weight:600;color:var(--dark)}
+.faq-q-text{flex:1}
+.faq-chev{color:var(--blue);flex-shrink:0;transition:transform .25s;display:flex;align-items:center}
+.faq-item.open .faq-chev{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 24px;color:var(--gray);font-size:15px;line-height:1.7}
+.faq-item.open .faq-a{max-height:600px;padding:0 24px 22px}
+.faq-cta{text-align:center;margin-top:40px;font-size:17px;font-weight:600;color:var(--dark)}
+.faq-cta a{margin-left:12px}
+@media (max-width:768px){
+  .faq{padding:60px 0}
+  .faq-q{padding:16px 18px;font-size:15px}
+  .faq-a{padding:0 18px;font-size:14px}
+  .faq-item.open .faq-a{padding:0 18px 18px}
+}
+
 </style>
 </head>
 <body>
@@ -542,54 +553,281 @@ footer{background:var(--dark);color:rgba(255,255,255,.6);padding:40px 0;border-t
 </section>
 
 <!-- FAQ -->
-<section id="faq">
+
+<!-- FAQ -->
+<section class="faq" id="faq">
   <div class="container">
-    <div class="section-label">FAQ</div>
-    <h2>Frequently Asked Questions</h2>
+    <div class="section-head">
+      <div class="section-label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+      <p>Answers to the most common questions from distributors, importers and wholesale buyers. Can't find what you need? <a href="#contact">Request a quote</a> — we reply within 24 hours.</p>
+    </div>
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-q">What is the minimum order quantity (MOQ)?</div>
-        <div class="faq-a">500 units for sealers (standard wholesale tier), 3,000 pieces for vacuum bags. Sample orders start from 5 units. For private label/OEM orders, MOQ is typically 1,000 units for custom packaging and 5,000 units for custom colors.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How long is the lead time?</div>
-        <div class="faq-a">Sample orders: 7 days. Standard wholesale (500–4,999 units): 15–25 days. Volume orders (5,000+): 20–30 days. OEM/ODM with customization: 25–40 days depending on scope. Lead times are ex-factory; add shipping time based on your chosen method.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can I order just a sample first?</div>
-        <div class="faq-a">Yes! Sample orders are available starting from 5 units. Sample pricing is higher than wholesale but credited back on your first bulk order. We ship samples via DHL/FedEx with 3-5 day delivery.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do you provide product certifications?</div>
-        <div class="faq-a">CE, RoHS, and FCC certificates are available for all orders. Additional certifications (EAC for Russia/CIS, PSE for Japan, etc.) can be arranged for volume orders with additional lead time and cost. NSF/ETL for commercial foodservice is currently under evaluation.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What payment methods do you accept?</div>
-        <div class="faq-a">Standard orders: T/T wire transfer (30% deposit, 70% balance before shipment). Orders over $20,000: L/C at sight. Samples: PayPal or Western Union. We accept USD, EUR, and GBP via WorldFirst multi-currency account.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Are the bags compatible with other handheld vacuum sealers?</div>
-        <div class="faq-a">Yes. Our embossed valve bags use a standard one-way air valve that works with most handheld vacuum pump sealers on the market, including FoodSaver handheld, Nesco, and other compatible brands. This makes them ideal for aftermarket/accessory sales.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What is the warranty policy?</div>
-        <div class="faq-a">All units come with a 1-year manufacturer warranty covering defects in materials and workmanship. DOA (Dead on Arrival) rate is guaranteed under 1%; any DOA units are replaced free of charge in your next shipment.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can you handle dropshipping or Amazon FBA prep?</div>
-        <div class="faq-a">We support FBA shipping directly to Amazon warehouses (FBA label application, polybag, carton labeling). Dropshipping to end customers is not available on wholesale terms — we are a factory, not a retailer.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What is the duty cycle? Can I use this continuously in a commercial kitchen?</div>
-        <div class="faq-a">The PVS02 is rated for 80–100 seals per full charge with a 120-second auto-shutoff for motor protection. Recommended cooldown between extended sessions is 30 seconds. For high-volume operations (100+ seals/hour), we recommend rotating 2-3 units. It is suitable for catering, food trucks, and retail packaging; for NSF-required back-of-house restaurant use, please check local health codes.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do you offer Net-30 payment terms?</div>
-        <div class="faq-a">Net-30 terms are available for approved volume partners ordering 5,000+ units per order with a track record of successful orders. New customers start with T/T 30/70 terms and can apply for credit terms after 3 successful orders.</div>
-      </div>
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What is your MOQ?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>MOQ is 500 sets (sealer + bags) for starter orders, 1,000 units for bare sealers, and 3,000 pcs for vacuum bags. Lower trial orders (100–300 units) accepted for first-time buyers at a sample tier pricing. Contact us with your target quantity for a personalized quote.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What is your pricing?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>All pricing is provided on request to protect our distributor channel. We quote FOB Shenzhen in USD within 24 hours. Pricing tiers scale with volume — 500 / 1,000 / 5,000 / 10,000+ units. For orders of 5,000+ units or OEM/private-label programs, request a custom quote directly.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Do you offer samples?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. Sample units are available for testing before bulk orders. Standard sample lead time is 5–7 days. Sample cost is refundable against your first bulk order. Shipping via DHL/FedEx, typically 3–5 days in transit worldwide.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What is the production lead time?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Standard mass production lead time is 15–25 days after deposit and sample approval, depending on order quantity and customization. Rush/air-freight orders can be turned around in 10 days for an expediting fee. Re-orders from existing distributors typically ship in 12–18 days.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What certifications do you have?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>All PVS02 sealers ship with CE, RoHS and FCC certificates (test reports available on request). For EU food-contact distribution, LFGB test reports, EU Authorized Representative service and LUCID packaging registration can be arranged within 3 weeks. For Russia/CIS, EAC declaration is available on request.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Which payment terms do you accept?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Standard terms: 30% T/T deposit, 70% balance before shipment. For orders over USD 20,000 we also accept L/C at sight. PayPal/Western Union accepted for sample and small trial orders. We are introducing WorldFirst multi-currency receiving accounts (USD/EUR/GBP) for smoother settlements.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Which Incoterms do you support?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>We support EXW Shenzhen, FOB Shenzhen, CFR and CIF by default. DDP (door-to-door, duty paid) is available for USA, EU and Russia/CIS through our forwarder partners, typically 18–25 days by rail to Russia and 30–40 days by sea to Europe/East Coast US.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Do you ship to Russia & CIS?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. We regularly ship to Russia, Belarus, Kazakhstan and other CIS countries via rail (18–25 days to Moscow, customs-included options available), truck and sea. EAC declaration and Russian-language packaging/instructions can be provided on request.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Do you offer OEM / private label?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. We have served 200+ private-label/OEM brands worldwide. Customization options include: logo print/laser on the unit, custom color (PMS match), custom packaging (gift box, blister, bulk carton), custom user manual, and firmware/start-up tone customization for orders above 3,000 units. New mold creation available for 10,000+ unit programs.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What is the warranty policy?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Standard warranty: 12 months from delivery. DOA (dead on arrival) units are replaced free of charge at a rate ≤1% per shipment, credited on the next order. Defective units beyond DOA are handled by RMA — return-to-base or local spare-parts replacement depending on volume. We provide a 0.3–0.5% free spare-parts ratio for each bulk order.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What suction power does the PVS02 deliver?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>The PVS02 delivers –60 kPa suction with a 5W high-torque motor. This is optimized for handheld portable use and works with all our embossed vacuum bags and zip-slider bags (90 μm thick). It is not a chamber machine — for continuous-duty commercial vacuum packing of liquids or bulk items, please contact us for a separate quotation.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">How many seals per battery charge?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>80–100 seals per full charge on the 1200 mAh built-in battery. Auto shut-off activates after 120 seconds of continuous use to protect the motor. Full recharge via USB-C takes about 2.5 hours.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Does the unit have a heat sealer?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>No. The PVS02 is a suction-only handheld sealer designed to work with our zip-slider vacuum bags (with one-way air valve). It does NOT include a heat-sealing bar; bags are reusable via the zip slider. For customers who need heat-seal capability, please ask about our heat-seal model variant (MOQ 2,000 units).</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What bag sizes are available?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Three stock sizes of embossed vacuum bags with white one-way valve and apple-green zip slider: Small 22×21 cm, Medium 26×28 cm, Large 30×34 cm. All are 90 μm thick, BPA-free, food-safe, freezer/boil-safe (sous-vide). Custom sizes and printing available for orders of 10,000+ pcs per size.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Do you sell bags separately?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. Vacuum bags can be ordered separately with MOQ 3,000 pcs per size. They are compatible with most handheld vacuum sealers that use a valve-type interface. Distributors commonly reorder bags as recurring consumable revenue.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Can I get a product catalog / data sheet?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. Download our digital catalog and product specification sheets from the website, or email us to request a PDF copy. Printed catalogs available for qualified distributors at trade shows or by post.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Can I visit your factory?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Absolutely. We welcome factory audits and visits at our Longhua (Shenzhen) facility. We can arrange airport pickup from Shenzhen Bao'an (SZX) or Hong Kong (HKG). Virtual factory tours via video call available for buyers unable to travel.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Which countries do you currently export to?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>We currently ship to 30+ countries across 5 continents, with active distributor partners in the USA, Germany, Poland, Russia, UK, UAE, South Korea, Japan, Australia and South Africa. North America and Europe are our largest markets; Russia/CIS is our fastest-growing region.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">How fast do you respond to inquiries?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>We respond to all wholesale inquiries within 24 hours, Monday–Saturday. Dedicated English- and Russian-speaking account managers handle Russia/CIS accounts. For urgent matters (production follow-ups, shipping issues), we typically respond within 2–3 hours during business hours (CST, UTC+8).</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Do you provide product photography / marketing assets?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. Qualified distributors receive a media pack including high-resolution product photos (white background, lifestyle), lifestyle video clips, Amazon/A+ style content, and social media short videos. Co-branded assets can be produced on request for launch-stage partners.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Do you support Amazon FBA prep?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. We offer FBA-prep service including FNSKU labeling, poly-bagging, carton labeling per Amazon requirements, and direct shipping to Amazon US/EU/JP fulfillment centers. FBA shipments are a regular part of our monthly volume.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What is included in the Starter Kit?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>The Starter Kit contains 1 handheld PVS02 sealer (Type-C rechargeable) + 100 medium zip-slider vacuum bags (26×28 cm) + USB-C charging cable + multilingual quick-start guide. It's packaged in a retail gift box and is the most popular SKU for distributor launch orders.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What is the battery specification?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Built-in 1200 mAh lithium-ion battery, USB-C rechargeable (5V/1A), no proprietary charger. Approximately 2.5 hours to full charge, with 80–100 seals per charge. The battery supports 500+ charge cycles; we do not sell the battery separately due to shipping regulations.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Are the bags BPA-free and food-safe?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. All our vacuum bags are BPA-free, food-contact safe, freezer-safe (-20°C), sous-vide safe (up to 100°C), and microwave-safe (with valve open). Material is PA+PE co-extruded embossed film, 90 μm thickness.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Do you offer dropshipping?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>We do not offer consumer dropshipping directly from our factory (B2B wholesale only). However, our distributors often use FBA or local 3PL for fulfillment; we support their dropship-style operations through bulk pallet shipments to their warehouse.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Can you handle rush / urgent orders?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. Rush production in 10 days and air freight (5–7 days transit) are available for an expediting fee and premium freight charge. Please flag urgency in your inquiry and we'll offer a concrete schedule within hours.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">How is quality controlled?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Three-round QC: incoming material inspection, in-line functional testing (suction, battery, charging, motor noise) during assembly, and pre-shipment random inspection at AQL 2.5. Every unit is powered up and pump-tested before packing. We keep pre-shipment inspection photos on file for every batch.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What packaging options are available?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Stock retail packaging: color gift box (16×8×6 cm for Starter Kit, 8×8×22 cm for bare sealer). Bulk/neutral packaging (brown carton, polybag per unit) available for private-label buyers. Palletized shipping with corner protection and shrink wrap. Custom packaging design supported for orders over 3,000 units.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Do you accept third-party inspections?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Yes. We welcome third-party inspections from SGS, Bureau Veritas, Intertek or the buyer's own QC team at any stage of production — pre-production, during production or pre-shipment (PSI). Inspection reports and samples can be sent before container loading.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">What is your defect / return rate?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Our reported DOA rate is below 0.5%, and overall in-warranty return rate is under 1.5% across 2025 shipments. We provide a 0.3–0.5% free spare-parts ratio on every bulk order to cover incidental replacements locally.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">Can I become an exclusive distributor?</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Exclusive distribution is considered for partners who commit to annual volume targets (typically 10,000+ units/year for a single country/region) and brand investment. We offer marketing support, listing protection, and regional pricing stability in exchange. Contact us to discuss a distribution agreement.</div></div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">I have another question.</span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a"><div>Send us a message via the contact form below or email jasonyuan866@gmail.com — we'll get back to you within 24 hours with a personalized answer. For Russia/CIS accounts, Russian-speaking support is available.</div></div>
+    </div>
+    </div>
+    <div class="faq-cta">
+      Still have questions?
+      <a href="#contact" class="btn btn-primary">Contact Our Sales Team</a>
     </div>
   </div>
 </section>
+
 
 <!-- Contact / Quote Form -->
 <section id="quote">

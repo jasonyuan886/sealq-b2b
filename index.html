@@ -471,6 +471,26 @@
 .form-success{background:#e8f8ee;color:#0a7a3c;border:1px solid #a7e3ba}
 .form-error{background:#fff0f0;color:#c5221f;border:1px solid #f8c0c0}
 .form-status a{color:inherit;text-decoration:underline}
+
+.faq{padding:90px 0;background:var(--light)}
+.faq-list{max-width:860px;margin:40px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border-radius:14px;box-shadow:var(--shadow);overflow:hidden;transition:box-shadow .2s}
+.faq-item:hover{box-shadow:0 8px 30px rgba(11,31,58,.12)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:none;border:none;text-align:left;cursor:pointer;font-size:16px;font-weight:600;color:var(--dark)}
+.faq-q-text{flex:1}
+.faq-chev{color:var(--blue);flex-shrink:0;transition:transform .25s;display:flex;align-items:center}
+.faq-item.open .faq-chev{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;padding:0 24px;color:var(--gray);font-size:15px;line-height:1.7}
+.faq-item.open .faq-a{max-height:600px;padding:0 24px 22px}
+.faq-cta{text-align:center;margin-top:40px;font-size:17px;font-weight:600;color:var(--dark)}
+.faq-cta a{margin-left:12px}
+@media (max-width:768px){
+  .faq{padding:60px 0}
+  .faq-q{padding:16px 18px;font-size:15px}
+  .faq-a{padding:0 18px;font-size:14px}
+  .faq-item.open .faq-a{padding:0 18px 18px}
+}
+
 </style>
 <!-- Google Analytics 4 (B2B wholesale traffic)
      Measurement ID待创建freshlocksealer@gmail.com风控解除(7/24)后填入并取消注释：
@@ -512,6 +532,7 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
         <li><a href="#products" lang-en>Products</a><a href="#products" lang-ru>Продукция</a></li>
         <li><a href="#factory" lang-en>Factory</a><a href="#factory" lang-ru>Производство</a></li>
         <li><a href="#wholesale" lang-en>Wholesale</a><a href="#wholesale" lang-ru>Опт</a></li>
+        <li><a href="#faq" lang-en>FAQ</a><a href="#faq" lang-ru>FAQ</a></li>
         <li><a href="#contact" lang-en>Contact</a><a href="#contact" lang-ru>Контакты</a></li>
       </ul>
     </nav>
@@ -901,6 +922,478 @@ gtag('js',new Date());gtag('config','G-XXXXXXXXXX',{anonymize_ip:true});
           <p lang-ru>Гарантия производителя 1 год. Процент брака менее 0,5%; бесплатная замена или кредит-ноты по подтверждённым дефектам.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label" lang-en>FAQ</div>
+      <div class="section-label" lang-ru>Частые вопросы</div>
+      <h2 lang-en>Frequently Asked Questions</h2>
+      <h2 lang-ru>Часто задаваемые вопросы</h2>
+      <p lang-en>Answers to the most common questions from distributors, importers and wholesale buyers. Can't find what you need? <a href="#contact">Send us a message</a> — we reply within 24 hours.</p>
+      <p lang-ru>Ответы на самые частые вопросы дистрибьюторов, импортёров и оптовых покупателей. Не нашли нужного? <a href="#contact">Напишите нам</a> — ответим за 24 часа.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What is your MOQ?</span>
+          <span lang-ru>Какой минимальный заказ (MOQ)?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>MOQ is 500 sets (sealer + bags) for starter orders, 1,000 units for bare sealers, and 3,000 pcs for vacuum bags. Lower trial orders (100–300 units) accepted for first-time buyers at a sample tier pricing. Contact us with your target quantity for a personalized quote.</div>
+        <div lang-ru>Минимальный заказ — 500 комплектов (вакууматор + пакеты) для стартовых заказов, 1000 штук для вакууматоров без пакетов и 3000 штук для вакуумных пакетов. Пробные заказы 100–300 штук для новых клиентов по цене образцов. Напишите желаемое количество — подготовим индивидуальное КП.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What is your pricing?</span>
+          <span lang-ru>Какие у вас цены?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>All pricing is provided on request to protect our distributor channel. We quote FOB Shenzhen in USD within 24 hours. Pricing tiers scale with volume — 500 / 1,000 / 5,000 / 10,000+ units. For orders of 5,000+ units or OEM/private-label programs, request a custom quote directly.</div>
+        <div lang-ru>Все цены предоставляются по запросу, чтобы защитить канал дистрибьюторов. Прайс FOB Шэньчжэнь в USD высылаем в течение 24 часов. Ценовые уровни зависят от объёма: 500 / 1000 / 5000 / 10000+ штук. Для заказов от 5000 штук или OEM/private label запрашивайте индивидуальное КП.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Do you offer samples?</span>
+          <span lang-ru>Вы отправляете образцы?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. Sample units are available for testing before bulk orders. Standard sample lead time is 5–7 days. Sample cost is refundable against your first bulk order. Shipping via DHL/FedEx, typically 3–5 days in transit worldwide.</div>
+        <div lang-ru>Да. Образцы доступны для тестирования перед оптовым заказом. Срок изготовления образца — 5–7 дней. Стоимость образца засчитывается в счёт первого оптового заказа. Доставка DHL/FedEx — 3–5 дней по миру.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What is the production lead time?</span>
+          <span lang-ru>Каковы сроки производства?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Standard mass production lead time is 15–25 days after deposit and sample approval, depending on order quantity and customization. Rush/air-freight orders can be turned around in 10 days for an expediting fee. Re-orders from existing distributors typically ship in 12–18 days.</div>
+        <div lang-ru>Стандартный срок серийного производства — 15–25 дней после предоплаты и утверждения образца, в зависимости от объёма и кастомизации. Срочные заказы с авиадоставкой — 10 дней с доплатой за срочность. Повторные заказы действующих дистрибьюторов — 12–18 дней.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What certifications do you have?</span>
+          <span lang-ru>Какие у вас сертификаты?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>All PVS02 sealers ship with CE, RoHS and FCC certificates (test reports available on request). For EU food-contact distribution, LFGB test reports, EU Authorized Representative service and LUCID packaging registration can be arranged within 3 weeks. For Russia/CIS, EAC declaration is available on request.</div>
+        <div lang-ru>Все вакууматоры PVS02 поставляются с сертификатами CE, RoHS и FCC (отчёты об испытаниях — по запросу). Для дистрибуции в ЕС по пищевому контакту в течение 3 недель оформляются отчёты LFGB, уполномоченный представитель в ЕС и регистрация упаковки LUCID. Для России/СНГ по запросу оформляется декларация ЕАЭС (EAC).</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Which payment terms do you accept?</span>
+          <span lang-ru>Какие условия оплаты?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Standard terms: 30% T/T deposit, 70% balance before shipment. For orders over USD 20,000 we also accept L/C at sight. PayPal/Western Union accepted for sample and small trial orders. We are introducing WorldFirst multi-currency receiving accounts (USD/EUR/GBP) for smoother settlements.</div>
+        <div lang-ru>Стандартные условия: 30% предоплата T/T, 70% перед отгрузкой. Для заказов от 20 000 USD — аккредитив L/C at sight. Для образцов и пробных заказов — PayPal/Western Union. Подключаем мультивалютные счета WorldFirst (USD/EUR/GBP) для удобства расчётов.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Which Incoterms do you support?</span>
+          <span lang-ru>Какие условия поставки (Incoterms)?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>We support EXW Shenzhen, FOB Shenzhen, CFR and CIF by default. DDP (door-to-door, duty paid) is available for USA, EU and Russia/CIS through our forwarder partners, typically 18–25 days by rail to Russia and 30–40 days by sea to Europe/East Coast US.</div>
+        <div lang-ru>По умолчанию работаем на условиях EXW Шэньчжэнь, FOB Шэньчжэнь, CFR и CIF. DDP (до двери, с пошлинами) доступно для США, ЕС и России/СНГ через наших партнёров: ж/д в Россию — 18–25 дней, море в Европу/США Восток — 30–40 дней.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Do you ship to Russia & CIS?</span>
+          <span lang-ru>Доставляете в Россию и СНГ?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. We regularly ship to Russia, Belarus, Kazakhstan and other CIS countries via rail (18–25 days to Moscow, customs-included options available), truck and sea. EAC declaration and Russian-language packaging/instructions can be provided on request.</div>
+        <div lang-ru>Да. Регулярно отгружаем в Россию, Беларусь, Казахстан и другие страны СНГ ж/д (18–25 дней до Москвы, варианты с растаможкой), автотранспортом и морем. По запросу предоставляем декларацию ЕАЭС, русскоязычную упаковку и инструкцию.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Do you offer OEM / private label?</span>
+          <span lang-ru>Делаете OEM / собственный бренд?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. We have served 200+ private-label/OEM brands worldwide. Customization options include: logo print/laser on the unit, custom color (PMS match), custom packaging (gift box, blister, bulk carton), custom user manual, and firmware/start-up tone customization for orders above 3,000 units. New mold creation available for 10,000+ unit programs.</div>
+        <div lang-ru>Да. Мы работаем с 200+ брендами на private label/OEM по всему миру. Возможна кастомизация: печать/лазерная гравировка логотипа, цвет по PMS, упаковка (подарочная коробка, блистер, оптовый короб), инструкция, прошивка/мелодия включения для заказов от 3000 штук. Создание новой формы — от 10 000 штук.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What is the warranty policy?</span>
+          <span lang-ru>Какова гарантия?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Standard warranty: 12 months from delivery. DOA (dead on arrival) units are replaced free of charge at a rate ≤1% per shipment, credited on the next order. Defective units beyond DOA are handled by RMA — return-to-base or local spare-parts replacement depending on volume. We provide a 0.3–0.5% free spare-parts ratio for each bulk order.</div>
+        <div lang-ru>Стандартная гарантия — 12 месяцев с даты поставки. Брак при получении (DOA) заменяется бесплатно в пределах ≤1% от партии, засчитывается в следующем заказе. Прочий брак — по схеме RMA: возврат на завод или замена запчастями на месте, в зависимости от объёма. К каждому оптовому заказу прилагаются бесплатные ЗИП в размере 0,3–0,5%.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What suction power does the PVS02 deliver?</span>
+          <span lang-ru>Какая мощность всасывания у PVS02?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>The PVS02 delivers –60 kPa suction with a 5W high-torque motor. This is optimized for handheld portable use and works with all our embossed vacuum bags and zip-slider bags (90 μm thick). It is not a chamber machine — for continuous-duty commercial vacuum packing of liquids or bulk items, please contact us for a separate quotation.</div>
+        <div lang-ru>PVS02 обеспечивает разрежение –60 кПа при мощности мотора 5 Вт. Это оптимизировано для портативного ручного использования и работает со всеми нашими текстурированными пакетами и zip-пакетами (90 мкм). Это не камерный вакууматор — для промышленной упаковки жидкостей или больших объёмов обратитесь за отдельным предложением.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>How many seals per battery charge?</span>
+          <span lang-ru>Сколько запаиваний от одного заряда?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>80–100 seals per full charge on the 1200 mAh built-in battery. Auto shut-off activates after 120 seconds of continuous use to protect the motor. Full recharge via USB-C takes about 2.5 hours.</div>
+        <div lang-ru>80–100 запаиваний от полного заряда встроенного аккумулятора 1200 мА·ч. Автоотключение срабатывает через 120 секунд непрерывной работы для защиты мотора. Полная зарядка через USB-C — около 2,5 часов.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Does the unit have a heat sealer?</span>
+          <span lang-ru>Есть ли в устройстве термозапайка?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>No. The PVS02 is a suction-only handheld sealer designed to work with our zip-slider vacuum bags (with one-way air valve). It does NOT include a heat-sealing bar; bags are reusable via the zip slider. For customers who need heat-seal capability, please ask about our heat-seal model variant (MOQ 2,000 units).</div>
+        <div lang-ru>Нет. PVS02 — ручной вакууматор откачки воздуха, работает с нашими zip-пакетами с обратным клапаном. Термонож в комплект НЕ входит; пакеты многоразовые за счёт zip-застёжки. Если нужна модель с термозапайкой, уточните вариант (MOQ 2000 штук).</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What bag sizes are available?</span>
+          <span lang-ru>Какие размеры пакетов есть?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Three stock sizes of embossed vacuum bags with white one-way valve and apple-green zip slider: Small 22×21 cm, Medium 26×28 cm, Large 30×34 cm. All are 90 μm thick, BPA-free, food-safe, freezer/boil-safe (sous-vide). Custom sizes and printing available for orders of 10,000+ pcs per size.</div>
+        <div lang-ru>Три стандартных размера текстурированных вакуумных пакетов с белым обратным клапаном и яблочно-зелёной zip-застёжкой: малый 22×21 см, средний 26×28 см, большой 30×34 см. Плотность 90 мкм, без BPA, пищевые, подходят для заморозки и су-вид. Индивидуальные размеры и печать — от 10 000 штук на размер.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Do you sell bags separately?</span>
+          <span lang-ru>Продаёте ли пакеты отдельно?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. Vacuum bags can be ordered separately with MOQ 3,000 pcs per size. They are compatible with most handheld vacuum sealers that use a valve-type interface. Distributors commonly reorder bags as recurring consumable revenue.</div>
+        <div lang-ru>Да. Вакуумные пакеты можно заказывать отдельно, MOQ 3000 штук на размер. Совместимы с большинством ручных вакууматоров с клапанным интерфейсом. Дистрибьюторы обычно повторно заказывают пакеты как регулярный расходный товар.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Can I get a product catalog / data sheet?</span>
+          <span lang-ru>Можно получить каталог / спецификацию?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. Download our digital catalog and product specification sheets from the website, or email us to request a PDF copy. Printed catalogs available for qualified distributors at trade shows or by post.</div>
+        <div lang-ru>Да. Электронный каталог и спецификации доступны для скачивания на сайте или по запросу на email. Печатные каталоги — для подтверждённых дистрибьюторов на выставках или по почте.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Can I visit your factory?</span>
+          <span lang-ru>Можно посетить ваш завод?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Absolutely. We welcome factory audits and visits at our Longhua (Shenzhen) facility. We can arrange airport pickup from Shenzhen Bao'an (SZX) or Hong Kong (HKG). Virtual factory tours via video call available for buyers unable to travel.</div>
+        <div lang-ru>Конечно. Мы приглашаем на аудит и экскурсии на наше производство в Лунхуа (Шэньчжэнь). Организуем встречу в аэропорту Шэньчжэнь (SZX) или Гонконг (HKG). Для тех, кто не может приехать, доступны онлайн-туры по видеосвязи.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Which countries do you currently export to?</span>
+          <span lang-ru>В какие страны вы сейчас экспортируете?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>We currently ship to 30+ countries across 5 continents, with active distributor partners in the USA, Germany, Poland, Russia, UK, UAE, South Korea, Japan, Australia and South Africa. North America and Europe are our largest markets; Russia/CIS is our fastest-growing region.</div>
+        <div lang-ru>Сейчас мы отгружаем в 30+ стран на 5 континентах; действующие дистрибьюторы — в США, Германии, Польше, России, Великобритании, ОАЭ, Южной Корее, Японии, Австралии и ЮАР. Крупнейшие рынки — Северная Америка и Европа; самый быстрорастущий — Россия/СНГ.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>How fast do you respond to inquiries?</span>
+          <span lang-ru>Как быстро отвечаете на запросы?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>We respond to all wholesale inquiries within 24 hours, Monday–Saturday. Dedicated English- and Russian-speaking account managers handle Russia/CIS accounts. For urgent matters (production follow-ups, shipping issues), we typically respond within 2–3 hours during business hours (CST, UTC+8).</div>
+        <div lang-ru>Отвечаем на все оптовые запросы в течение 24 часов с Пн по Сб. Персональные менеджеры на английском и русском языках ведут клиентов из России/СНГ. По срочным вопросам (статус производства, отгрузка) — отвечаем за 2–3 часа в рабочее время (CST, UTC+8).</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Do you provide product photography / marketing assets?</span>
+          <span lang-ru>Предоставляете фото / маркетинговые материалы?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. Qualified distributors receive a media pack including high-resolution product photos (white background, lifestyle), lifestyle video clips, Amazon/A+ style content, and social media short videos. Co-branded assets can be produced on request for launch-stage partners.</div>
+        <div lang-ru>Да. Подтверждённые дистрибьюторы получают медиа-пак: фото высокого разрешения (на белом, сценарии использования), короткие видео, контент в стиле Amazon A+ и ролики для соцсетей. Совместно брендированные материалы — по запросу для партнёров на этапе запуска.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Do you support Amazon FBA prep?</span>
+          <span lang-ru>Делаете подготовку под Amazon FBA?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. We offer FBA-prep service including FNSKU labeling, poly-bagging, carton labeling per Amazon requirements, and direct shipping to Amazon US/EU/JP fulfillment centers. FBA shipments are a regular part of our monthly volume.</div>
+        <div lang-ru>Да. Доступен сервис подготовки под Amazon FBA: маркировка FNSKU, упаковка в полиэтилен, маркировка коробов по требованиям Amazon и прямая отгрузка на склады Amazon в США/ЕС/Японии. Отгрузки на FBA — регулярная часть нашего месячного объёма.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What is included in the Starter Kit?</span>
+          <span lang-ru>Что входит в стартовый набор?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>The Starter Kit contains 1 handheld PVS02 sealer (Type-C rechargeable) + 100 medium zip-slider vacuum bags (26×28 cm) + USB-C charging cable + multilingual quick-start guide. It's packaged in a retail gift box and is the most popular SKU for distributor launch orders.</div>
+        <div lang-ru>Стартовый набор включает 1 ручной вакууматор PVS02 (зарядка Type-C) + 100 средних zip-пакетов (26×28 см) + кабель USB-C + инструкцию на нескольких языках. Упакован в подарочную розничную коробку; самый популярный SKU для стартовых заказов дистрибьюторов.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What is the battery specification?</span>
+          <span lang-ru>Характеристики аккумулятора?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Built-in 1200 mAh lithium-ion battery, USB-C rechargeable (5V/1A), no proprietary charger. Approximately 2.5 hours to full charge, with 80–100 seals per charge. The battery supports 500+ charge cycles; we do not sell the battery separately due to shipping regulations.</div>
+        <div lang-ru>Встроенный литий-ионный аккумулятор 1200 мА·ч, зарядка USB-C (5V/1A), без фирменного зарядного. Полная зарядка — около 2,5 часов, 80–100 запаиваний на заряд. Ресурс — 500+ циклов; аккумулятор не продаётся отдельно из-за правил перевозки.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Are the bags BPA-free and food-safe?</span>
+          <span lang-ru>Пакеты без BPA и безопасны для продуктов?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. All our vacuum bags are BPA-free, food-contact safe, freezer-safe (-20°C), sous-vide safe (up to 100°C), and microwave-safe (with valve open). Material is PA+PE co-extruded embossed film, 90 μm thickness.</div>
+        <div lang-ru>Да. Все вакуумные пакеты не содержат BPA, разрешены для контакта с пищей, подходят для заморозки (-20°C), су-вид (до 100°C) и микроволновки (при открытом клапане). Материал — коэкструзионная текстурированная плёнка PA+PE, 90 мкм.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Do you offer dropshipping?</span>
+          <span lang-ru>Работаете по дропшиппингу?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>We do not offer consumer dropshipping directly from our factory (B2B wholesale only). However, our distributors often use FBA or local 3PL for fulfillment; we support their dropship-style operations through bulk pallet shipments to their warehouse.</div>
+        <div lang-ru>Напрямую с завода дропшиппинг для конечных покупателей не делаем (только B2B опт). Но наши дистрибьюторы часто используют FBA или местных 3PL-операторов; мы поддерживаем такие схемы оптовыми паллетными отгрузками на их склады.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Can you handle rush / urgent orders?</span>
+          <span lang-ru>Можно срочный заказ?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. Rush production in 10 days and air freight (5–7 days transit) are available for an expediting fee and premium freight charge. Please flag urgency in your inquiry and we'll offer a concrete schedule within hours.</div>
+        <div lang-ru>Да. Срочное производство 10 дней и авиадоставка (5–7 дней в пути) доступны с доплатой за срочность и повышенным тарифом на перевозку. Укажите срочность в запросе — предложим конкретный график в течение нескольких часов.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>How is quality controlled?</span>
+          <span lang-ru>Как контролируется качество?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Three-round QC: incoming material inspection, in-line functional testing (suction, battery, charging, motor noise) during assembly, and pre-shipment random inspection at AQL 2.5. Every unit is powered up and pump-tested before packing. We keep pre-shipment inspection photos on file for every batch.</div>
+        <div lang-ru>Трёхэтапный контроль качества: входной контроль материалов, функциональное тестирование на линии (вакуум, аккумулятор, зарядка, шум мотора) и выборочная проверка перед отгрузкой по стандарту AQL 2.5. Каждый экземпляр включается и тестируется на откачку перед упаковкой; фото приёмки каждой партии хранятся в архиве.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What packaging options are available?</span>
+          <span lang-ru>Какие варианты упаковки?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Stock retail packaging: color gift box (16×8×6 cm for Starter Kit, 8×8×22 cm for bare sealer). Bulk/neutral packaging (brown carton, polybag per unit) available for private-label buyers. Palletized shipping with corner protection and shrink wrap. Custom packaging design supported for orders over 3,000 units.</div>
+        <div lang-ru>Стандартная розничная упаковка: цветная подарочная коробка (16×8×6 см для стартового набора, 8×8×22 см для вакууматора без пакетов). Оптовая/нейтральная упаковка (коричневый короб, каждый вакууматор в пакете) — для private label. Паллетирование с защитой углов и стрейч-плёнкой. Дизайн упаковки под заказ — от 3000 штук.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Do you accept third-party inspections?</span>
+          <span lang-ru>Принимаете сторонний контроль качества (инспекции)?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Yes. We welcome third-party inspections from SGS, Bureau Veritas, Intertek or the buyer's own QC team at any stage of production — pre-production, during production or pre-shipment (PSI). Inspection reports and samples can be sent before container loading.</div>
+        <div lang-ru>Да. Мы принимаем инспекции SGS, Bureau Veritas, Intertek или собственной команды контроля покупателя на любом этапе: до производства, в процессе и перед отгрузкой (PSI). Отчёты и образцы могут быть отправлены до загрузки контейнера.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>What is your defect / return rate?</span>
+          <span lang-ru>Какой процент брака / возвратов?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Our reported DOA rate is below 0.5%, and overall in-warranty return rate is under 1.5% across 2025 shipments. We provide a 0.3–0.5% free spare-parts ratio on every bulk order to cover incidental replacements locally.</div>
+        <div lang-ru>Заявленный показатель DOA (брак при получении) — ниже 0,5%; общий уровень гарантийных возвратов по отгрузкам 2025 года — менее 1,5%. К каждому оптовому заказу прилагаются бесплатные ЗИП в размере 0,3–0,5% для локальной замены.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>Can I become an exclusive distributor?</span>
+          <span lang-ru>Можно стать эксклюзивным дистрибьютором?</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Exclusive distribution is considered for partners who commit to annual volume targets (typically 10,000+ units/year for a single country/region) and brand investment. We offer marketing support, listing protection, and regional pricing stability in exchange. Contact us to discuss a distribution agreement.</div>
+        <div lang-ru>Эксклюзивная дистрибуция рассматривается для партнёров с годовыми объёмами от 10 000 штук на страну/регион и инвестициями в бренд. В обмен предоставляем маркетинговую поддержку, защиту листингов и стабильность региональных цен. Напишите — обсудим дистрибьюторское соглашение.</div>
+      </div>
+    </div><div class="faq-item">
+      <button class="faq-q" onclick="this.parentElement.classList.toggle('open')" aria-expanded="false">
+        <span class="faq-q-text">
+          <span lang-en>I have another question.</span>
+          <span lang-ru>У меня другой вопрос.</span>
+        </span>
+        <span class="faq-chev" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </button>
+      <div class="faq-a">
+        <div lang-en>Send us a message via the contact form below or email jasonyuan866@gmail.com — we'll get back to you within 24 hours with a personalized answer. For Russia/CIS accounts, Russian-speaking support is available.</div>
+        <div lang-ru>Напишите нам через форму ниже или на jasonyuan866@gmail.com — ответим персонально в течение 24 часов. Для клиентов из России/СНГ доступна поддержка на русском языке.</div>
+      </div>
+    </div>
+    </div>
+    <div class="faq-cta">
+      <span lang-en>Still have questions?</span>
+      <span lang-ru>Остались вопросы?</span>
+      <a href="#contact" class="btn btn-primary" lang-en>Contact Our Sales Team</a>
+      <a href="#contact" class="btn btn-primary" lang-ru>Связаться с отделом продаж</a>
     </div>
   </div>
 </section>
