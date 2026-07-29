@@ -1196,7 +1196,6 @@ function setLang(lang){
   document.body.classList.toggle('ru', lang==='ru');
   document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));
   document.querySelector(`.lang-switch button:nth-child(${lang==='en'?1:2})`).classList.add('active');
-  document.documentElement.lang = lang;
   // switch textarea placeholder
   const tf=document.getElementById('msgField');
   if(tf){tf.placeholder = lang==='ru' ? tf.dataset.ruph : tf.dataset.enph;}
@@ -1221,12 +1220,6 @@ function setLang(lang){
   const url = new URL(window.location);
   if(lang==='ru'){url.searchParams.set('lang','ru')}else{url.searchParams.delete('lang')}
   window.history.replaceState({},'',url);
-  // Sync meta language tags
-  const cl = document.querySelector('meta[http-equiv="Content-Language"]');
-  if(cl) cl.content = lang==='ru' ? 'ru' : 'en';
-  const ogl = document.querySelector('meta[property="og:locale"]');
-  if(ogl) ogl.content = lang==='ru' ? 'ru_RU' : 'en_US';
-  document.documentElement.lang = lang;
   try{localStorage.setItem('sealq_lang', lang)}catch(e){}
 }
 (function(){
