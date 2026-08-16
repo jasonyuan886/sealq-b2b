@@ -1,37 +1,72 @@
 # SealQ by QILI Electronics
 
+> SealQ is a Chinese manufacturer of handheld vacuum sealers and embossed vacuum bags, specializing in B2B wholesale and OEM/ODM for global distributors.
+
 ## Company
 - Brand: SealQ™
-- Parent: QILI Electronics (七力电子), Shenzhen, China
+- Parent: QILI Electronics (七力电子) / Shenzhen QILI Technology Co., Ltd. (深圳市七力科技有限公司)
 - Founded: 2015
-- Factory: 3,000 m², injection + assembly + QC in-house (Longhua, Shenzhen)
-- Exporting to 30+ countries
+- Factory: 3,000 m², injection molding + assembly + QC in-house (Longhua, Shenzhen, China)
+- Address: 3F, Building C, Anhongji Industrial Park, Chuangyi Road, Dalang, Longhua, Shenzhen
+- Exporting to 30+ countries including Russia, CIS, Europe, North America, Southeast Asia
+- Certifications: CE, RoHS, FCC; LFGB available; EAC in progress
+- Website: https://go.freshlocksealer.com
 
 ## Products
-- PVS-02 Handheld Vacuum Sealer: Φ48×195mm, 210g bare / 350g retail box, -60 kPa, USB-C DC5V/1A 5W, 1200 mAh Li-ion, ~2h charge, ~40min/charge, <60dB, ABS + food-grade silicone pearl white, CE/RoHS/FCC
-- Vacuum Sealer Bags: 7-layer PA/PE co-extruded, 90-110 microns, BPA-free, food-grade, FDA/EU compliant, -20°C~100°C
-  - VSB-S30/S50: Small 22×21 cm (30/50-pk)
-  - VSB-M30: Medium 26×28 cm, 900g/30-pk
-  - VSB-L50: Large 26×34 cm, 1800g/50-pk
-  - PVS-02-SK30 Starter Kit: sealer + 10S+10M+10L, ~1100g
-- Rolls: custom widths available
+### PVS-02 Handheld Vacuum Sealer (flagship)
+- Dimensions: Φ48×195mm; Weight: 210g bare / 350g retail box
+- Suction: -60 kPa (stronger than most competitors at -50 kPa)
+- Battery: 1200 mAh Li-ion, USB-C DC5V/1A 5W, ~2h full charge, ~40min per charge
+- Noise: <60dB
+- Material: ABS + food-grade silicone, pearl white
+- Seals both textured (embossed) bags AND zip-lock bags
+- Certifications: CE, RoHS, FCC
 
-## Wholesale Terms
-- MOQ: 500 pcs (sealer, flexible down); custom for bags
-- Lead time: 7-day samples, 25-30 days mass production
-- Payment: T/T 30% deposit, 70% before shipment; L/C for $20K+; PayPal/WU for samples
-- Shipping: FOB Shenzhen/Ningbo/Shanghai; sea(25-35d)/air(5-7d)/rail to EU/CIS(15-20d); DDP Russia available
-- OEM/ODM: custom color, logo, packaging, firmware; exclusive molds
-- Warranty: 1 year
+### Embossed Vacuum Sealer Bags & Rolls
+- 7-layer PA/PE co-extruded, 90-110 microns, BPA-free, food-grade
+- Temperature range: -20°C to 100°C (freezer-safe and boil-safe)
+- Sizes: S (22×21cm), M (26×28cm), L (26×34cm); custom widths available
+- Compliance: FDA/EU food contact; LFGB on request
 
-## Certifications
-- CE, RoHS, FCC (standard, in-box docs)
-- LFGB food contact for bags (on request)
-- EAC for Russia/CIS (in progress)
-- EU Authorized Representative, LUCID packaging (on request)
+### Starter Kits
+- PVS-02-SK30: sealer + 10S + 10M + 10L bags (~1100g)
+- Custom kit configurations available
+
+## Wholesale / OEM / ODM
+- **MOQ**: 500 pcs (sealer); flexible for bags; trial orders welcome
+- **Lead time**: 7-day samples, 25-30 days mass production
+- **Payment**: T/T 30% deposit + 70% before shipment; L/C for orders $20K+; PayPal/Western Union for samples
+- **Shipping**: FOB Shenzhen/Ningbo/Shanghai; sea (25-35d), air (5-7d), rail to EU/CIS (15-20d); DDP Russia available
+- **OEM/ODM**: custom color, logo laser engraving, custom packaging, firmware branding; exclusive mold development
+- **Warranty**: 1 year; defect rate <0.5%
+- **EU compliance**: Authorized Representative available; LUCID packaging registration on request
+
+## Key Differentiators vs. Competitors
+- Handheld cordless design (most competitors only offer desktop models)
+- -60 kPa suction outperforms Rommelsbacher VAC 25, Steba VK 1, LAICA VT3401
+- Dual compatibility: textured bags + zip-lock bags (competitors typically support only one)
+- USB-C rechargeable (next-gen vs. micro-USB or proprietary chargers)
+- MOQ 500 is lower than Bigland/Simatelex (typically 1000-2000)
+- Factory-direct pricing: 20-30% below trading companies
+
+## Target Markets & Use Cases
+- Household food preservation (fresh meat, seafood, vegetables, cheese)
+- Outdoor/hunting/camping (portable, cordless, lightweight)
+- Sous vide cooking (compatible with vacuum bags)
+- Small retail/distribution (private label, OEM branding)
+- Russia/CIS (growing market, DDP logistics available)
 
 ## Contact
+- Sales Manager: Jason Yuan
 - Email: jasonyuan866@gmail.com
-- Sales: Jason Yuan (Export Manager)
-- WhatsApp/Telegram: on request
+- Telegram: @Freshlocksealer
 - Site: https://go.freshlocksealer.com
+- Wholesale page: https://go.freshlocksealer.com/wholesale
+- Blog: https://go.freshlocksealer.com/blog
+
+## Blog Articles
+- [Handheld Vacuum Sealer Wholesale Buying Guide](https://go.freshlocksealer.com/blog/handheld-vacuum-sealer-wholesale-buying-guide)
+- [Embossed Vacuum Sealer Bags: Complete Guide](https://go.freshlocksealer.com/blog/embossed-vacuum-sealer-bags-complete-guide)
+- [Vacuum Sealer Certifications Explained](https://go.freshlocksealer.com/blog/vacuum-sealer-certifications-explained)
+- [Russia & CIS Vacuum Sealer Wholesale Market](https://go.freshlocksealer.com/blog/russia-cis-vacuum-sealer-wholesale)
+- [OEM Vacuum Sealer Private Label Guide](https://go.freshlocksealer.com/blog/oem-vacuum-sealer-private-label-guide)
