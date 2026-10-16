@@ -5,12 +5,12 @@ const net = require('net');
 const tls = require('tls');
 const { Buffer } = require('buffer');
 
-const SMTP_HOST = 'smtp.gmail.com';
-const SMTP_PORT = 587;
-const SMTP_USER = 'jasonyuan866@gmail.com';
-const SMTP_PASS = 'fintawjilffveoeo';
-const TO_EMAIL = 'jasonyuan866@gmail.com';
-const FROM_EMAIL = 'jasonyuan866@gmail.com';
+const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
+const SMTP_PORT = Number(process.env.SMTP_PORT || 587);
+const SMTP_USER = process.env.SMTP_USER || 'jasonyuan866@gmail.com';
+const SMTP_PASS = process.env.SMTP_PASS || '';
+const TO_EMAIL = process.env.TO_EMAIL || 'jasonyuan866@gmail.com';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'jasonyuan866@gmail.com';
 
 function b64(s){return Buffer.from(s).toString('base64')}
 function eb64(s){return b64(unescape(encodeURIComponent(s)))}
